@@ -85,6 +85,7 @@ class Membership(db.Model, SerializerMixin):
                 self.fighterReady = True
                 return self.expires_at
             else:
+                choice == "not selected/error"
                 print("No Selection")
             
             

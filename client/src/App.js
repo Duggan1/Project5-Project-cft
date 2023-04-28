@@ -20,6 +20,11 @@ import SignUp from  "./SignUp"
 function App() {
 
   const [user, setUser] = useState(null);
+  const [signUp, setSignUp] = useState(false)
+  const handleSignupClick=() =>{
+        setSignUp(!signUp)
+    }
+  
 
   useEffect(() => {
     fetch("/check_session").then((response) => {
@@ -36,6 +41,8 @@ function App() {
     setUser(null);
   }
 
+  
+
 
 
 
@@ -45,18 +52,18 @@ function App() {
     
     <div className = "navbar">
     <BrowserRouter>
-    {/* {user ? <h2>Welcome, {user.username}!</h2> :<Login handleLogin={handleLogin} />} */}
-    {/* <Logout handleLogout={handleLogout}/>  */}
+    {user ? <Logout user={user} onLogout={handleLogout}/>  :<Login onLogin={handleLogin} />}
+    
     
   
-      {/* <NavBar /> */}
+      <NavBar />
       
         <Routes>
-          <Route path="/memberships" element={<Memberships />}/>
+          <Route path="/memberships" element={<Memberships user={user}/>}/>
           <Route path="/schedule" element={<Schedule />}/>
           <Route path="/" element={<Home />}/>
           <Route path="/aboutUs" element={<AboutUs/>}/>
-          <Route path="/signup" element={<SignUp setUser={setUser}/>}/>
+          <Route path="/signup" element={<SignUp handleSignupClick = {handleSignupClick}/>}/>
         </Routes>
     </BrowserRouter>
     

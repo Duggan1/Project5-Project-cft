@@ -6,7 +6,12 @@ const sessionUser = []
 function Login({ onLogin }) {
     // const [session, setSession] = useState(false)
     const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
+    const [_password, setPassword] = useState("")
+    const [isIncorrect, setIsIncorrect] = useState(false)
+
+    const toggleIncorrect =()=>{
+        setIsIncorrect(!isIncorrect)
+    }
 
     // if (session === false){
     
@@ -24,7 +29,7 @@ function Login({ onLogin }) {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ username, _password }),
         }).then((r) => {
             if (r.ok) {
                 r.json().then((user) => {
@@ -33,9 +38,9 @@ function Login({ onLogin }) {
 
                 // navigate('/')
             }
-            // else {
-            //     toggleModal()
-            // }
+            else {
+                toggleIncorrect()
+            }
         });
     }
     return (
@@ -43,17 +48,20 @@ function Login({ onLogin }) {
         <input
           type="text"
           value={username}
-          placeholder="Enter Password here "
+          placeholder="Enter Username here "
           onChange={(e) => setUsername(e.target.value)}
         />
         <br></br>
         <input
-        type="text"
+        type="password"
         // value={password}
         placeholder="Enter Password here "
         onChange={(e) => setPassword(e.target.value)}
       />
         <button type="submit">Login</button>
+        {isIncorrect ? <div>
+            <h2>Username or Password Invalid, Please Try Again!</h2>
+        </div>: null}
       </form>
     );
   }

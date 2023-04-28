@@ -15,11 +15,12 @@ function NavBar() {
 
     return (
 
-                <div>
+                <div className="header2">
                     <div>
                         <div className="cftlogo" ></div>
+                        <h1>CFT Header</h1>
                     </div>
-                    <h1>CFT Header</h1>
+                    
                 
                 <div className="navLink" >
                     <NavLink
@@ -63,6 +64,17 @@ function NavBar() {
                         
                     >
                         About CFT 
+                    </NavLink>
+                    <br />
+                    <NavLink
+                        exact to="/signup"
+                        className="submit ui teal button"
+                        style={linkStyles}
+                        activeStyle={{
+                            background: "white",}}
+                        
+                    >
+                        Sign Up
                     </NavLink>
 
                 </div>

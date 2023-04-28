@@ -2,7 +2,7 @@ from flask import make_response, request, session, jsonify
 from flask_restful import Resource
 
 from config import app, db, api
-from models import User
+from models import *
 from flask_bcrypt import Bcrypt
 
 bcrypt = Bcrypt(app)
@@ -22,12 +22,49 @@ class Users(Resource):
         )
 api.add_resource(Users, '/users')
 
+class Memberships(Resource):
+    def get(self):
+        memberships = Membership.query.all()
+        return make_response(
+            [membership.to_dict() for membership in memberships],
+            200
+        )
+    def post(self):
+        data = request.get_json()
+        try:
+            newMembership = Membership (
+            plan = data['plan'],
+            user_id = data["user_id"],
+            gym_id = data["gym_id"]
+
+
+            )
+        except ValueError:
+            return make_response({"error": "must be valid review"}, 404)
+
+        db.session.add(newMembership)
+        db.session.commit()
+        return make_response(newMembership.to_dict(), 201)
+    
+
+api.add_resource(Memberships, '/memberships')
+
+
+
+
+
+
+
+
+
 class SignUp(Resource):
     def post(self):
         password = request.json['password']
-        # name = request.json['name']
         username = request.json['username']
-        
+        email = request.json['email']
+        phone = request.json['phone']
+        age = request.json['age']
+
 
         user_exists = User.query.filter(User.username == username).first() is not None
 
@@ -38,7 +75,11 @@ class SignUp(Resource):
         new_user = User(
             # name= name,
             _password_hash=hashed_password,  
-            username=username
+            username=username,
+            email=email,
+            phone=phone,
+            age = age
+
         )
         db.session.add(new_user)
         db.session.commit()
