@@ -7,8 +7,8 @@ function Memberships({user}) {
     const navigate = useNavigate()
 
     const [formData, SetFormData] = useState({
-        plan:"",
-        gym_id: "",
+        plan:"1 Day Membership",
+        gym_id: "1",
   
       })
       function handleGymChange(e) {

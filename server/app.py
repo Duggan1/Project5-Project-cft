@@ -52,11 +52,6 @@ api.add_resource(Memberships, '/memberships')
 
 
 
-
-
-
-
-
 class SignUp(Resource):
     def post(self):
         password = request.json['password']
