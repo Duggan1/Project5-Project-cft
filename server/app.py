@@ -40,7 +40,7 @@ class Memberships(Resource):
 
             )
         except ValueError:
-            return make_response({"error": "must be valid review"}, 404)
+            return make_response({"error": "must be valid membership"}, 404)
 
         db.session.add(newMembership)
         db.session.commit()
@@ -48,6 +48,40 @@ class Memberships(Resource):
     
 
 api.add_resource(Memberships, '/memberships')
+
+class UserById(Resource):
+    def get(self, id):
+        user = User.query.filter_by(id = id).first()
+        if user == None:
+            return make_response({"error":"user not found"}, 404)
+        return make_response(user.to_dict(), 200)
+    
+    def delete(self, id):
+        user = User.query.filter_by(id = id).first()
+        if user == None:
+            return make_response({"error":"user not found"}, 404)
+        db.session.delete(user)
+        db.session.commit()
+        return make_response({"deleted": "she gone"}, 204)
+    
+    def patch(self, id):
+        user = User.query.filter_by(id = id).first()
+        data = request.get_json()
+        for attr in data:
+            setattr(user, attr, data[attr])
+        db.session.add(user)
+        db.session.commit()
+        return make_response(user.to_dict(), 201)
+    
+api.add_resource(UserById, "/user/<int:id>")
+
+
+
+
+
+
+
+
 
 
 

@@ -5,6 +5,12 @@ import {useNavigate} from 'react-router-dom'
 function Memberships({user}) {
 
     const navigate = useNavigate()
+    const [isIncorrect, setIsIncorrect] = useState(false)
+
+    const toggleIncorrect =()=>{
+        setIsIncorrect(!isIncorrect)
+    }
+    
 
     const [formData, SetFormData] = useState({
         plan:"1 Day Membership",
@@ -27,6 +33,10 @@ function Memberships({user}) {
 
       function handleSubmit(e){
         e.preventDefault()
+        if (user === null){
+        toggleIncorrect()
+        } else {
+
         const newMembership = {
           plan : formData.plan,
           gym_id: formData.gym_id,
@@ -41,7 +51,7 @@ function Memberships({user}) {
         .then(response => response.json())
         .then(navigate('/'))
         // .then(onAddReview)
-      }
+      }}
 
 
 
@@ -70,6 +80,9 @@ function Memberships({user}) {
        </div>
        <div class="action">
         <button class="action-button" type='submit'>POST</button>
+        {isIncorrect ? <div>
+            <h2>You need to LOG-IN or SIGN-UP before you get a Membership, Please Try Again!</h2>
+        </div>: null}
       </div>
       </form>
 
