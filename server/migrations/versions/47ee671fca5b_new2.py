@@ -1,8 +1,8 @@
-"""message
+"""new2
 
-Revision ID: b667ba65f4c4
+Revision ID: 47ee671fca5b
 Revises: 
-Create Date: 2023-04-27 14:09:58.391842
+Create Date: 2023-05-01 17:19:19.349361
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'b667ba65f4c4'
+revision = '47ee671fca5b'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -44,8 +44,6 @@ def upgrade():
     sa.Column('plan', sa.String(), nullable=True),
     sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
     sa.Column('updated_at', sa.DateTime(), nullable=True),
-    sa.Column('expires_at', sa.DateTime(), nullable=True),
-    sa.Column('fighterReady', sa.Boolean(), nullable=True),
     sa.ForeignKeyConstraint(['gym_id'], ['gyms.id'], name=op.f('fk_memberships_gym_id_gyms')),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], name=op.f('fk_memberships_user_id_users')),
     sa.PrimaryKeyConstraint('id')

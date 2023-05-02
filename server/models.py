@@ -13,6 +13,7 @@ bcrypt = bcrypt
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
+    serialize_rules= ("-created_at", "-updated_at", "-memberships","-_password_hash")
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True)
@@ -54,6 +55,7 @@ class User(db.Model, SerializerMixin):
 
 class Membership(db.Model, SerializerMixin):
     __tablename__ = 'memberships'
+    serialize_rules= ("-created_at", "-updated_at", "-user_id","-user._password_hash", "-user.id","-gym.address","-gym.phone","-gym.id","-gym_id","-id")
 
     id = db.Column(db.Integer, primary_key = True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
@@ -96,7 +98,7 @@ class Membership(db.Model, SerializerMixin):
 
 class Gym(db.Model, SerializerMixin):
     __tablename__ = 'gyms'
-
+    serialize_rules= ("-created_at", "-updated_at", "-memberships",)
 
     id = db.Column(db.Integer, primary_key = True)
     city = db.Column(db.String)
