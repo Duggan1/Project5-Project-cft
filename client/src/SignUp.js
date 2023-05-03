@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 
 
-function SignUp({handleSignupClick}) {
+function SignUp({handleSignupClick, onLogin}) {
 
     const [session, setSession] = useState(false)
     const [username, setUsername] = useState("")
@@ -36,11 +36,15 @@ function SignUp({handleSignupClick}) {
           r.json()
           .then( console.log('success'))
           setSession(!session)
+          onLogin(user)
+          navigate('/')
         } else {
           console.log('failure')
         }
       })
         e.target.reset()
+        
+        
     }
     
     const setSignupState = (e) => {

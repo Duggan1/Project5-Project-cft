@@ -1,9 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import {useNavigate} from 'react-router-dom'
+
 
 const sessionUser = []
 
 function Login({ onLogin }) {
+    const navigate = useNavigate()
     // const [session, setSession] = useState(false)
     const [username, setUsername] = useState("")
     const [_password, setPassword] = useState("")
@@ -34,9 +37,10 @@ function Login({ onLogin }) {
             if (r.ok) {
                 r.json().then((user) => {
                     console.log(user)
-                    onLogin(user) })
+                    onLogin(user)
+                    navigate('/') })
 
-                // navigate('/')
+                
             }
             else {
                 toggleIncorrect()
@@ -44,6 +48,10 @@ function Login({ onLogin }) {
         });
     }
     return (
+        <div className="acct">
+                    <center>
+            <div className="cftlogo" ></div>
+            </center>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -57,12 +65,13 @@ function Login({ onLogin }) {
         // value={password}
         placeholder="Enter Password here "
         onChange={(e) => setPassword(e.target.value)}
-      />
+      /><br></br>
         <button type="submit">Login</button>
         {isIncorrect ? <div>
             <h2>Username or Password Invalid, Please Try Again!</h2>
         </div>: null}
       </form>
+      </div>
     );
   }
   export default Login;

@@ -58,7 +58,8 @@ function Memberships({user}) {
 
 
   return (
-    <>
+    < >
+    <div className='memberships'>
     <form class="card-form" onSubmit={ handleSubmit }>
         
       
@@ -93,7 +94,7 @@ function Memberships({user}) {
 
    
 
-
+</div>
    </>
   );
 }

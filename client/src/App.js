@@ -52,18 +52,19 @@ function App() {
     
     <div className = "navbar">
     <BrowserRouter>
-    {user ? <Logout user={user} onLogout={handleLogout}/>  :<Login onLogin={handleLogin} />}
+    {user ? <Logout user={user} onLogout={handleLogout} />  :<Login onLogin={handleLogin} />}
     
     
   
-      <NavBar />
+      <NavBar user={user}/>
       
         <Routes>
           <Route path="/memberships" element={<Memberships user={user}/>}/>
           <Route path="/schedule" element={<Schedule />}/>
           <Route path="/" element={<Home />}/>
           <Route path="/aboutUs" element={<AboutUs/>}/>
-          <Route path="/signup" element={<SignUp handleSignupClick = {handleSignupClick}/>}/>
+          <Route path="/signup" element={<SignUp handleSignupClick = {handleSignupClick} onLogin={handleLogin}/>}/>
+          
         </Routes>
     </BrowserRouter>
     

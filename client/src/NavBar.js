@@ -4,24 +4,17 @@ import { NavLink } from "react-router-dom";
 const linkStyles = {
     display: "inline-block",
     width: "100px",
-    padding: "12px",
-    margin: "0 6px 6px",
+    padding: "19px",
+    margin: "0 6px 0px",
     background: "black",
     textDecoration: "none",
     color: "red",
   };
 
-function NavBar() {
+function NavBar({user}) {
 
     return (
-
-                <div className="header2">
-                    <div>
-                        <div className="cftlogo" ></div>
-                        <h1>CFT Header</h1>
-                    </div>
-                    
-                
+                <div>
                 <div className="navLink" >
                     <NavLink
                         exact
@@ -66,6 +59,8 @@ function NavBar() {
                         About CFT 
                     </NavLink>
                     <br />
+
+                    {user ? null :
                     <NavLink
                         exact to="/signup"
                         className="submit ui teal button"
@@ -75,7 +70,7 @@ function NavBar() {
                         
                     >
                         Sign Up
-                    </NavLink>
+                    </NavLink>}
 
                 </div>
                 </div>

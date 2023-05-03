@@ -56,7 +56,16 @@ function Logout({ onLogout, user }) {
   
   return (
     <>
+    <div className="acct">
       <header>
+      
+          <div>
+          <center>
+            <div className="cftlogo" ></div>
+            </center>
+            {/* <h1>CFT Header</h1> */}
+          </div>
+
         <h2>Welcome, {user.username}!</h2>
         <button onClick={handleEdit}>Edit</button>
         <button onClick={handleLogout}>Logout</button>
@@ -64,25 +73,31 @@ function Logout({ onLogout, user }) {
       </header>
   
       {edit ?
-        <form class='ui form' onSubmit={editUser}>
+        <form  class='ui form' onSubmit={editUser}>
           <div class='field'>
-            <input onChange={(e) => setUsername(e.target.value)} type="text" name="username" placeholder={user.username} />
+            <label for="username">Username </label><br></br>
+            <input id="username" onChange={(e) => setUsername(e.target.value)} type="text" name="username" placeholder={user.username} />
           </div>
-          <div class='field'>
+          {/* <div class='field'>
             <input onChange={(e) => setPassword(e.target.value)} type="text" name="password" placeholder={user._password_hash} />
+          </div> */}
+          <div class='field'>
+          <label for="email">E-mail </label><br></br>
+            <input id="email" onChange={(e) => setEmail(e.target.value)} type="text" name="email" placeholder={user.email} />
           </div>
           <div class='field'>
-            <input onChange={(e) => setEmail(e.target.value)} type="text" name="email" placeholder={user.email} />
+          <label for="phone">Phone Number </label><br></br>
+            <input id="phone" onChange={(e) => setPhone(e.target.value)} type="text" name="phone" placeholder={user.phone} />
           </div>
           <div class='field'>
-            <input onChange={(e) => setPhone(e.target.value)} type="text" name="phone" placeholder={user.phone} />
-          </div>
-          <div class='field'>
-            <input onChange={(e) => setAge(e.target.value)} type="number" min="5" name="age" placeholder={user.age} />
+          <label for="age">Age </label><br></br>
+            <input id="age" onChange={(e) => setAge(e.target.value)} type="number" min="5" name="age" placeholder={user.age} />
           </div>
           <button class='fluid ui button' type="submit">Submit</button>
         </form>
       : null}
+      </div>
+      
     </>
   );
 }

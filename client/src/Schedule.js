@@ -9,8 +9,10 @@ function Schedule() {
 
 
   return (
-    <div>
+    <div className="sjs">
+        <center>
         <div className="schedule" ></div>
+        </center>
         {/* <img url='./Images/CFTS.jpeg' alt='./Images/CFTS.jpeg'/> */}
 
     </div>

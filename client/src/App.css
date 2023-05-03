@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+.sjs {
+	background-color: black;
+}
 .schedule {
   width: 600px;
   height: 500px;
@@ -15,6 +17,10 @@
   background-image: url("./Images/CFTL.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
+  align-items: center;
+}
+.memberships {
+	background-color: grey;
 }
 .App-header {
   background-color: #282c34;
@@ -39,6 +45,22 @@
 		margin-top: 1.5rem;
 	}
 }
+.acct {
+	background-color: white;
+	color:red;
+	text-align: right;
+
+}
+.navLink {
+	background-color: black;
+  	/* padding-top: 50px;
+  	padding-bottom: 50px;
+  	padding-left: 45px;
+  	padding-right: 25px; */
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: space-between;
+}
 
 .input-label {
 	color: #8597a3;
@@ -46,6 +68,13 @@
 	top: 1.5rem;
 	transition: .25s ease;
 }
+.home {
+	background-color: black;
+	color:white;
+	text-align: center;
+
+  }
+  
 
 .input-field {
 	border: 0;
@@ -63,4 +92,6 @@
 			transform: translateY(-1.5rem);
 		}
 	}
+
+
 }
