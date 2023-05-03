@@ -17,7 +17,11 @@ import SignUp from  "./SignUp"
 
 
 
+
 function App() {
+
+
+
 
   const [user, setUser] = useState(null);
   const [signUp, setSignUp] = useState(false)
@@ -51,6 +55,7 @@ function App() {
     
     
     <div className = "navbar">
+      
     <BrowserRouter>
     {user ? <Logout user={user} onLogout={handleLogout} />  :<Login onLogin={handleLogin} />}
     

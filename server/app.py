@@ -1,14 +1,39 @@
-from flask import make_response, request, session, jsonify
+from flask import make_response, redirect, request, session, jsonify
 from flask_restful import Resource
 
 from config import app, db, api
 from models import *
 from flask_bcrypt import Bcrypt
+import stripe
+
+
+stripe.api_key = 'sk_test_51N3lYDBSH1u53ZPgCNTC7ErmGHo1DHTIl1TMIAHXZEzwwWQaFaSw3nKBiTAjtjc3TUFarB0kbkw4uY3Pi4qR65r900jIuOQWkR'
+
 
 bcrypt = Bcrypt(app)
 # Enable CORS
 
+YOUR_DOMAIN = 'http://localhost:5555'
 
+@app.route('/create-checkout-session', methods=['POST'])
+def create_checkout_session():
+    try:
+        checkout_session = stripe.checkout.Session.create(
+            line_items=[
+                {
+                    # Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+                    'price': '{{PRICE_ID}}',
+                    'quantity': 1,
+                },
+            ],
+            mode='payment',
+            success_url=YOUR_DOMAIN + '?success=true',
+            cancel_url=YOUR_DOMAIN + '?canceled=true',
+        )
+    except Exception as e:
+        return str(e)
+
+    return redirect(checkout_session.url, code=303)
 
 # Views go here!
 session_user = []
@@ -166,6 +191,30 @@ api.add_resource(SignUp, '/signup', endpoint='signup')
 api.add_resource(Login, '/login', endpoint='login')
 api.add_resource(Logout, '/logout', endpoint='logout')
 api.add_resource(CheckSession, '/check_session', endpoint='check_session')
+
+@app.route('/stripe_payment', methods=['POST'])
+def stripe_payment():
+    data = request.get_json()
+
+    payment_method = stripe.PaymentMethod.create(
+        type='card',
+        card={
+            'number': data['cardNumber'],
+            'exp_month': data['expMonth'],
+            'exp_year': data['expYear'],
+            'cvc': data['cvc']
+        }
+    )
+
+    charge = stripe.Charge.create(
+        payment_method=payment_method.id,
+        amount=data['amount'],
+        currency='usd',
+        description='Example charge'
+    )
+
+    return jsonify(charge)
+
 
 
 

@@ -5,10 +5,11 @@ const linkStyles = {
     display: "inline-block",
     width: "100px",
     padding: "19px",
-    margin: "0 6px 0px",
+    margin: "0 6px 2px",
     background: "black",
     textDecoration: "none",
     color: "red",
+    border: "red",
   };
 
 function NavBar({user}) {

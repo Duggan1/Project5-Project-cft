@@ -1,8 +1,54 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
+// import { CardElement, Elements, useElements, useStripe } from '@stripe/react-stripe-js';
 
+const ProductDisplay = () => (
+    <section>
+      <div className="product">
+        <img
+          src="https://i.imgur.com/EHyR2nP.png"
+          alt="The cover of Stubborn Attachments"
+        />
+        <div className="description">
+        <h3>Stubborn Attachments</h3>
+        <h5>$20.00</h5>
+        </div>
+      </div>
+      <form action="/create-checkout-session" method="POST">
+        <button type="submit">
+          Checkout
+        </button>
+      </form>
+    </section>
+  );
+  
+  const Message = ({ message }) => (
+    <section>
+      <p>{message}</p>
+    </section>
+  );
+  
 
 function Memberships({user}) {
+
+
+    const [message, setMessage] = useState("");
+
+    useEffect(() => {
+      // Check to see if this is a redirect back from Checkout
+      const query = new URLSearchParams(window.location.search);
+  
+      if (query.get("success")) {
+        setMessage("Order placed! You will receive an email confirmation.");
+      }
+  
+      if (query.get("canceled")) {
+        setMessage(
+          "Order canceled -- continue to shop around and checkout when you're ready."
+        );
+      }
+    }, []);
+  
 
     const navigate = useNavigate()
     const [isIncorrect, setIsIncorrect] = useState(false)
@@ -10,6 +56,14 @@ function Memberships({user}) {
     const toggleIncorrect =()=>{
         setIsIncorrect(!isIncorrect)
     }
+    // function CheckoutForm() {
+    //     const stripe = useStripe();
+    //     const elements = useElements();
+      
+    //     const handleSubmitS = async (event) => {
+    //       event.preventDefault();
+    //       // Use the Stripe API to create a payment method and process the payment
+    //     }
     
 
     const [formData, SetFormData] = useState({
@@ -87,9 +141,16 @@ function Memberships({user}) {
       </div>
       </form>
 
-
-
-
+      {message ? <Message message={message} /> : <ProductDisplay />}
+      {/* <form onSubmit={handleSubmitS}>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <CardElement />
+      <button type="submit" disabled={!stripe}>
+        Pay
+      </button>
+    </form>
+ */}
 
 
    
@@ -98,5 +159,12 @@ function Memberships({user}) {
    </>
   );
 }
+// function StripeCheckout() {
+//     return (
+//       <Elements stripe={stripePromise}>
+//         <CheckoutForm />
+//       </Elements>
+//     );
+//   }
 
 export default Memberships;
