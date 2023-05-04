@@ -12,6 +12,7 @@ import { Routes } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import Logout from "./Logout";
 import SignUp from  "./SignUp"
+import Foot from "./Foot"
 
 
 
@@ -72,6 +73,7 @@ function App() {
           
         </Routes>
     </BrowserRouter>
+    <Foot />
     
     
     </div>

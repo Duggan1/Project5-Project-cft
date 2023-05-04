@@ -23,7 +23,7 @@
   	height: 160px;
 }
 .about {
-	background-color: rgb(44, 45, 45);
+	background-color: rgb(55, 53, 53);
 	color: white;
 	align-items: center;
 	text-align: center;
@@ -37,9 +37,24 @@
   align-items: center;
 }
 .memberships {
-	background-color: yellow;
+	background-color: rgba(55, 53, 53, 0.65);
+	color: white;
+	text-align: center;
+	/* background-image: url("./Images/341260897_241927845028189_3175328261831266190_n.jpeg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	backg */
+	
+	
 	/* background-image: url("https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9rVlI9&_nc_ht=scontent-ord5-1.xx&oh=00_AfDBDxnCMKMO1mEK7O-8Vw6JemuWiLhRyRLTtRcweskPcQ&oe=64579F2B");
 } */
+}
+.foot {
+	background-color: black;
+	background-size: cover;
+	
+	/* padding-left: 100px;
+	margin-left: 10px; */
 }
 .App-header {
   background-color: #282c34;
@@ -68,6 +83,7 @@
 	background-color: white;
 	color:red;
 	text-align: right;
+	background-size: cover;
 
 }
 .navLink {

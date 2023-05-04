@@ -8,18 +8,18 @@ from flask_bcrypt import Bcrypt
 import stripe
 
 
-stripe.api_key = 'sk_test_51N3lYDBSH1u53ZPgCNTC7ErmGHo1DHTIl1TMIAHXZEzwwWQaFaSw3nKBiTAjtjc3TUFarB0kbkw4uY3Pi4qR65r900jIuOQWkR'
+# stripe.api_key = 'sk_test_51N3lYDBSH1u53ZPgCNTC7ErmGHo1DHTIl1TMIAHXZEzwwWQaFaSw3nKBiTAjtjc3TUFarB0kbkw4uY3Pi4qR65r900jIuOQWkR'
 
 
 bcrypt = Bcrypt(app)
 # Enable CORS
 
-app = Flask(__name__,
-            static_url_path='',
-            static_folder='public')
+# app = Flask(__name__,
+#             static_url_path='',
+#             static_folder='public')
 
 
-YOUR_DOMAIN = 'http://localhost:3000'
+YOUR_DOMAIN = 'http://localhost:5555'
 
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
