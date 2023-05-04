@@ -1,5 +1,6 @@
 from flask import make_response, redirect, request, session, jsonify
 from flask_restful import Resource
+from flask import Flask
 
 from config import app, db, api
 from models import *
@@ -13,21 +14,33 @@ stripe.api_key = 'sk_test_51N3lYDBSH1u53ZPgCNTC7ErmGHo1DHTIl1TMIAHXZEzwwWQaFaSw3
 bcrypt = Bcrypt(app)
 # Enable CORS
 
-YOUR_DOMAIN = 'http://localhost:5555'
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='public')
+
+
+YOUR_DOMAIN = 'http://localhost:3000'
 
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
+    # userid = session['user_id']
     try:
         checkout_session = stripe.checkout.Session.create(
+            customer_email='userid@gmail.com',
+            # submit_type='donate',
+            billing_address_collection='auto',
+            shipping_address_collection={
+              'allowed_countries': ['US', 'CA'],
+            },
             line_items=[
                 {
                     # Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                    'price': '{{PRICE_ID}}',
+                    'price': 'price_1N44yYBSH1u53ZPgkOKboZll',
                     'quantity': 1,
                 },
             ],
             mode='payment',
-            success_url=YOUR_DOMAIN + '?success=true',
+            success_url=YOUR_DOMAIN + '/',
             cancel_url=YOUR_DOMAIN + '?canceled=true',
         )
     except Exception as e:

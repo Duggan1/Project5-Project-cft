@@ -1,35 +1,76 @@
 import React, {useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
-// import { CardElement, Elements, useElements, useStripe } from '@stripe/react-stripe-js';
+import { CardElement, Elements, useElements, useStripe } from '@stripe/react-stripe-js';
 
-const ProductDisplay = () => (
-    <section>
-      <div className="product">
-        <img
-          src="https://i.imgur.com/EHyR2nP.png"
-          alt="The cover of Stubborn Attachments"
-        />
-        <div className="description">
-        <h3>Stubborn Attachments</h3>
-        <h5>$20.00</h5>
-        </div>
-      </div>
-      <form action="/create-checkout-session" method="POST">
-        <button type="submit">
-          Checkout
-        </button>
-      </form>
-    </section>
-  );
-  
-  const Message = ({ message }) => (
-    <section>
-      <p>{message}</p>
-    </section>
-  );
+
   
 
 function Memberships({user}) {
+
+    function handleGymChange(e) {
+        SetFormData({
+          ...formData,
+          gym_id: e.target.value,
+        });
+      }
+
+      function handlePlanChange(e) {
+        SetFormData({
+          ...formData,
+          plan: e.target.value,
+        });
+      }
+
+
+
+    const ProductDisplay = () => (
+        <section>
+          <div className="product">
+            <img
+              src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
+              alt="The cover of Stubborn Attachments"
+              height="360px"
+              width="760px"
+            />
+            <div className="description">
+            <h3>Chicago Fight Team </h3>
+            <h5>$1.00</h5>
+            </div>
+          </div>
+          <form action="/create-checkout-session" method="POST">
+          {/* <div class="input">
+               <select class="input-field" onChange={handleGymChange}>
+                 <option class="input-field" id="chicago" value = '1' >Chicago IL, USA</option> 
+                 <option class="input-field" id="mexico" value ='2'>Guadalajara Jalisco, Mexico</option> 
+               </select>
+             <label class="input-label">Chicago Fight Team Locations</label>          
+           </div> 
+           <div class="input">
+               <select class="input-field" onChange={handlePlanChange}>
+               <option class="input-field" id="1day" value = '1 Day Membership' >1 Day Membership</option> 
+                 <option class="input-field" id="1month" value = '1 Month Membership'>1 Month Membership</option> 
+                 <option class="input-field" id="3month" value = '3 Month Membership' >3 Month Membership</option> 
+                 <option class="input-field" id="1year" value = '1 Year Membership'>1 Year Membership</option> {/* {formData.restaurant_id} */}
+               {/* </select>
+             <label class="input-label">Membership Options</label>          
+           </div> */} 
+            <button type="submit">
+              Checkout
+            </button>
+          </form>
+        </section>
+      );
+      
+      const Message = ({ message }) => (
+        <section>
+          <p>{message}</p>
+        </section>
+      );
+
+
+
+
+
 
 
     const [message, setMessage] = useState("");
@@ -71,19 +112,7 @@ function Memberships({user}) {
         gym_id: "1",
   
       })
-      function handleGymChange(e) {
-        SetFormData({
-          ...formData,
-          gym_id: e.target.value,
-        });
-      }
-
-      function handlePlanChange(e) {
-        SetFormData({
-          ...formData,
-          plan: e.target.value,
-        });
-      }
+     
 
       function handleSubmit(e){
         e.preventDefault()
@@ -106,6 +135,13 @@ function Memberships({user}) {
         .then(navigate('/'))
         // .then(onAddReview)
       }}
+    //   function StripeCheckout() {
+    //     return (
+    //       <Elements stripe={stripePromise}>
+    //         <CheckoutForm />
+    //       </Elements>
+    //     );
+    //   }
 
 
 
@@ -139,7 +175,7 @@ function Memberships({user}) {
             <h2>You need to LOG-IN or SIGN-UP before you get a Membership, Please Try Again!</h2>
         </div>: null}
       </div>
-      </form>
+      </form>  
 
       {message ? <Message message={message} /> : <ProductDisplay />}
       {/* <form onSubmit={handleSubmitS}>
@@ -159,12 +195,6 @@ function Memberships({user}) {
    </>
   );
 }
-// function StripeCheckout() {
-//     return (
-//       <Elements stripe={stripePromise}>
-//         <CheckoutForm />
-//       </Elements>
-//     );
-//   }
+
 
 export default Memberships;
