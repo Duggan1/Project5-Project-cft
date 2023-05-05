@@ -36,18 +36,23 @@
   background-size: 100%;
   align-items: center;
 }
-.memberships {
+form {
+	background-color: rgba(151, 145, 145, 0.513);
+}
+.memberships1 {
 	background-color: rgba(55, 53, 53, 0.65);
+	/* background-image: url("./Images/chicago.jpeg"); */
 	color: white;
 	text-align: center;
-	/* background-image: url("./Images/341260897_241927845028189_3175328261831266190_n.jpeg");
-	background-repeat: no-repeat;
-	background-size: 100%;
-	backg */
-	
-	
-	/* background-image: url("https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9rVlI9&_nc_ht=scontent-ord5-1.xx&oh=00_AfDBDxnCMKMO1mEK7O-8Vw6JemuWiLhRyRLTtRcweskPcQ&oe=64579F2B");
-} */
+	/* background-image: url("./Images/chicago.jpeg"); */
+}
+.memberships2 {
+	/* background-image: url("./Images/mexico.jpeg"); */
+	background-image: url("./Images/mexico.jpeg");
+	color: white;
+	text-align: center;
+
+
 }
 .foot {
 	background-color: black;
@@ -63,7 +68,7 @@
 
 }
 .mbg {
-	background-color: aquamarine;
+	
 	background-image: url("./Images/chicago.jpeg");
 	background-size: 100%;
 	

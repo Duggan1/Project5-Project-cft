@@ -3,6 +3,9 @@ import {useNavigate} from 'react-router-dom'
 import { CardElement, Elements, useElements, useStripe } from '@stripe/react-stripe-js';
 import { NavLink } from "react-router-dom";
 
+
+
+
 const linkStyles = {
     display: "inline-block",
     width: "100px",
@@ -206,15 +209,30 @@ function Memberships({user}) {
     //     );
     //   }
 
+        let mex = true
+        if (formData.gym_id === "1"){
+            mex = true
+        }
+        if (formData.gym_id === "2"){
+            mex = false
+        }
 
+        let pic2 = "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
+        if (formData.gym_id === "1"){
+            pic2 = "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
+        }
+        if (formData.gym_id === "2"){
+            pic2 = "https://scontent-ord5-2.xx.fbcdn.net/v/t1.6435-9/172729431_143343254458624_1812354647126060410_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=9YlZuf9VTy4AX-WVdJi&_nc_ht=scontent-ord5-2.xx&oh=00_AfC1-X05BhccsRWoKHlDXRKtC5-hXGr9LxJdqFO-c0aYZQ&oe=647CB888"
+        }
 
 
 
   return (
     < >
-    <div className='memberships'><div className="product">
+    {mex ? <div className='memberships1' ><div className="product">
             <img
-              src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
+            //   src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
+              src={pic2}
               alt="The cover of Stubborn Attachments"
               height="360px"
               width="760px"
@@ -278,7 +296,75 @@ function Memberships({user}) {
 
    
 
-</div>
+        </div> :<div className='memberships2' ><div className="product">
+            <img
+            //   src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
+              src={pic2}
+              alt="The cover of Stubborn Attachments"
+              height="360px"
+              width="760px"
+            />
+            <div className="description">
+            <h1>Chicago Fight Team </h1>
+            {/* <h5>{pprice}</h5> */}
+            </div></div>
+    <form class="card-form" onSubmit={ handleSubmit }>
+        
+      
+        <div class="input">
+           <select class="input-field" onChange={handleGymChange}>
+             <option class="input-field" id="chicago" value = '1' >Chicago IL, USA</option> 
+             <option class="input-field" id="mexico" value ='2'>Guadalajara Jalisco, Mexico</option> 
+           </select>
+         <label class="input-label">Chicago Fight Team Locations</label>          
+       </div> 
+       <div class="input">
+           <select class="input-field" onChange={handlePlanChange}>
+           <option class="input-field" id="1day" value = '1 Day Membership' >1 Day Membership</option> 
+             <option class="input-field" id="1month" value = '1 Month Membership'>1 Month Membership</option> 
+             <option class="input-field" id="3month" value = '3 Month Membership' >3 Month Membership</option> 
+             <option class="input-field" id="1year" value = '1 Year Membership'>1 Year Membership</option> {/* {formData.restaurant_id} */}
+           </select>
+         <label class="input-label">Membership Options</label>          
+       </div>
+       <div class="action">
+        <button class="action-button" type='submit'>Purchase Membership</button>
+        {isIncorrect ? <div>
+            <h2>You need to LOG-IN or SIGN-UP before you get a Membership, Please Try Again!</h2>
+        </div>: null}
+      </div>
+      </form>  
+      {/* <h5>{pprice}</h5> */}
+      <h2>{showp}</h2>
+
+      {/* <button onClick={handleClick}>Go to Stripe</button> */}
+
+      {/* {message ? <Message message={message} /> : <ProductDisplay />} */}
+      {/* <form onSubmit={handleSubmitS}>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <CardElement />
+      <button type="submit" disabled={!stripe}>
+        Pay
+      </button>
+    </form>
+ */}
+   <NavLink
+                        exact to="/mbg"
+                        className="submit ui teal button"
+                        style={linkStyles}
+                        activeStyle={{
+                            background: "white",}}
+                        
+                    >
+                        Who Belongs to which Gym Location & their Membership package 
+                    </NavLink>
+
+
+   
+
+        </div>}
+    
    </>
   );
 }
