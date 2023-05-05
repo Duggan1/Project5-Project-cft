@@ -63,42 +63,12 @@ class Membership(db.Model, SerializerMixin):
     plan = db.Column(db.String)
     created_at = db.Column(db.DateTime, server_default = db.func.now())
     updated_at = db.Column(db.DateTime, onupdate = db.func.now())
-    # expires_at = db.Column(db.DateTime)
-    # fighterReady = db.Column(db.Boolean)
-
-    # def __init__(self, user_id, gym_id, plan):
-    #     self.user_id = user_id
-    #     self.gym_id = gym_id
-    #     self.plan = plan
-    #     self.created_at = datetime.now()
-    #     choice = self.plan
-    #     def switch(choice):
-    #         if choice == "1 Month Membership":
-    #             self.expires_at = self.created_at + timedelta(days=30)
-    #             self.fighterReady = True
-    #             return self.expires_at
-    #         elif choice == "3 Month Membership":
-    #             self.expires_at = self.created_at + timedelta(days=90)
-    #             self.fighterReady = True
-    #             return self.expires_at
-    #         elif choice == "1 Day Membership":
-    #             self.expires_at = self.created_at + timedelta(days=1)
-    #             self.fighterReady = True
-    #             return self.expires_at
-    #         elif choice == "1 Year Membership":
-    #             self.expires_at = self.created_at + timedelta(days=365)
-    #             self.fighterReady = True
-    #             return self.expires_at
-    #         else:
-    #             choice == "not selected/error"
-    #             print("No Selection")
-            
 
 
 
 class Gym(db.Model, SerializerMixin):
     __tablename__ = 'gyms'
-    serialize_rules= ("-created_at", "-updated_at", "-memberships",)
+    serialize_rules= ("-created_at", "-updated_at", "-memberships","users","plans")
 
     id = db.Column(db.Integer, primary_key = True)
     city = db.Column(db.String)
@@ -107,6 +77,9 @@ class Gym(db.Model, SerializerMixin):
 
     memberships = db.relationship('Membership', backref = 'gym', cascade = 'all, delete-orphan')
     users = association_proxy('memberships', 'user')
+    plans = association_proxy('memberships', 'plan')
+    
+
 
 
 

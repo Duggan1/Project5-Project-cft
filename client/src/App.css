@@ -52,9 +52,34 @@
 .foot {
 	background-color: black;
 	background-size: cover;
+	color:white;
 	
 	/* padding-left: 100px;
 	margin-left: 10px; */
+}
+.rightList {
+	text-align: right;
+
+
+}
+.mbg {
+	background-color: aquamarine;
+	background-image: url("./Images/chicago.jpeg");
+	background-size: 100%;
+	
+}
+ul {
+	background-color: rgba(55, 53, 53, 0.65);
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+	color:#eee
+
+}
+.leftList {
+	text-align: left;
+
+
 }
 .App-header {
   background-color: #282c34;

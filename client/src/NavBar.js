@@ -9,7 +9,7 @@ const linkStyles = {
     background: "black",
     textDecoration: "none",
     color: "red",
-    border: "red",
+    
   };
 
 function NavBar({user}) {
@@ -58,6 +58,17 @@ function NavBar({user}) {
                         
                     >
                         About CFT 
+                    </NavLink>
+                    <br />
+                    <NavLink
+                        exact to="/jiujitsu"
+                        className="submit ui teal button"
+                        style={linkStyles}
+                        activeStyle={{
+                            background: "white",}}
+                        
+                    >
+                        Jiu-Jitsu 
                     </NavLink>
                     <br />
 

@@ -60,6 +60,15 @@ class Users(Resource):
         )
 api.add_resource(Users, '/users')
 
+class Gyms(Resource):
+    def get(self):
+        gyms = Gym.query.all()
+        return make_response(
+            [gym.to_dict() for gym in gyms],
+            200
+        )
+api.add_resource(Gyms, '/gyms')
+
 class Memberships(Resource):
     def get(self):
         memberships = Membership.query.all()
@@ -112,14 +121,6 @@ class UserById(Resource):
         return make_response(user.to_dict(), 201)
     
 api.add_resource(UserById, "/user/<int:id>")
-
-
-
-
-
-
-
-
 
 
 

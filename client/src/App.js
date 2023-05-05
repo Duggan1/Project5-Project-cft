@@ -13,6 +13,8 @@ import { useState, useEffect } from "react";
 import Logout from "./Logout";
 import SignUp from  "./SignUp"
 import Foot from "./Foot"
+import Jiujitsu from "./Jiujitsu";
+import Mbg from "./Mbg";
 
 
 
@@ -69,6 +71,8 @@ function App() {
           <Route path="/schedule" element={<Schedule />}/>
           <Route path="/" element={<Home />}/>
           <Route path="/aboutUs" element={<AboutUs/>}/>
+          <Route path="/jiujitsu" element={<Jiujitsu/>}/>
+          <Route path="/mbg" element={<Mbg/>}/>
           <Route path="/signup" element={<SignUp handleSignupClick = {handleSignupClick} onLogin={handleLogin}/>}/>
           
         </Routes>

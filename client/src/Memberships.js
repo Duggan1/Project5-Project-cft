@@ -1,6 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import { CardElement, Elements, useElements, useStripe } from '@stripe/react-stripe-js';
+import { NavLink } from "react-router-dom";
+
+const linkStyles = {
+    display: "inline-block",
+    width: "100px",
+    padding: "19px",
+    margin: "0 6px 2px",
+    background: "black",
+    textDecoration: "none",
+    color: "red",
+    
+  };
 
 
   
@@ -252,6 +264,16 @@ function Memberships({user}) {
       </button>
     </form>
  */}
+   <NavLink
+                        exact to="/mbg"
+                        className="submit ui teal button"
+                        style={linkStyles}
+                        activeStyle={{
+                            background: "white",}}
+                        
+                    >
+                        Who Belongs to which Gym Location & their Membership package 
+                    </NavLink>
 
 
    
