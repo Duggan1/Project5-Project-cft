@@ -14,7 +14,8 @@ function Jiujitsu() {
 return (
 
 
-    <div className="foot">
+    <div className="jiujitsu">
+        <h1>Jiu-Jitsu</h1>
     
     <center>
         <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/334247507_718371939740967_1421760906699961986_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=dOc74gup_J0AX9JDH5J&_nc_ht=scontent-ord5-1.xx&oh=00_AfD6dcPIROmPEyCLYq_LPg3mFGZHbBmPrsDY8ado1i9z-A&oe=645A5E93" alt="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/334247507_718371939740967_1421760906699961986_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=dOc74gup_J0AX9JDH5J&_nc_ht=scontent-ord5-1.xx&oh=00_AfD6dcPIROmPEyCLYq_LPg3mFGZHbBmPrsDY8ado1i9z-A&oe=645A5E93" />

@@ -23,10 +23,12 @@
   	height: 160px;
 }
 .about {
-	background-color: rgb(55, 53, 53);
+	background-color: black;
+	background-size: cover;
 	color: white;
 	align-items: center;
 	text-align: center;
+	margin-top: -25px;
 }
 .cftlogo {
   width: 160px;
@@ -61,6 +63,18 @@ form {
 	
 	/* padding-left: 100px;
 	margin-left: 10px; */
+}
+
+.jiujitsu {
+	margin-top: -25px;
+	background-color: black;
+	background-size: cover;
+	color:white;
+	text-align: center;
+	margin-bottom: -16px;
+	
+
+	
 }
 .rightList {
 	text-align: right;
