@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 # from apscheduler.schedulers.background import BackgroundScheduler
 
 
-bcrypt = bcrypt
+
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
@@ -45,24 +45,35 @@ class User(db.Model, SerializerMixin):
     def authenticate(self, password):
         return bcrypt.check_password_hash(
             self._password_hash, password.encode('utf-8'))
+    
+    @validates('_password')
+    def pass_hashing(self, key, attr):
+        password_hash = bcrypt.generate_password_hash(attr.encode('utf-8'))
+        return password_hash.decode('utf-8')
 
     @staticmethod
     def simple_hash(input):
         return sum(bytearray(input, encoding='utf-8'))
 
     
-
+# ////nullable fo gym&user idbefore the push
 
 class Membership(db.Model, SerializerMixin):
     __tablename__ = 'memberships'
-    serialize_rules= ("-created_at", "-updated_at", "-user_id","-user._password_hash", "-user.id","-gym.address","-gym.phone","-gym.id","-gym_id","-id")
+    serialize_rules= ("-created_at", "-updated_at", "-user_id","-user._password_hash", "-user.id","-gym.address","-gym.phone","-gym.id","-gym_id")
 
     id = db.Column(db.Integer, primary_key = True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    gym_id = db.Column(db.Integer, db.ForeignKey('gyms.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'),nullable=False)
+    gym_id = db.Column(db.Integer, db.ForeignKey('gyms.id'),nullable=False)
     plan = db.Column(db.String)
     created_at = db.Column(db.DateTime, server_default = db.func.now())
     updated_at = db.Column(db.DateTime, onupdate = db.func.now())
+
+    @validates( 'plan' )
+    def planmustbeone(self, key, value):
+        if len(value) < 1:
+            raise ValueError( 'too short')
+        return value
 
 
 

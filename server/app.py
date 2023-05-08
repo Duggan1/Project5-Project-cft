@@ -49,7 +49,12 @@ def create_checkout_session():
     return redirect(checkout_session.url, code=303)
 
 # Views go here!
-session_user = []
+
+# @app.before_request
+# def check_if_logged_in():
+#     if not session.get('user_id'):
+#         return {'error': 'Unauthorized, Please log in'}, 401
+
 
 class Users(Resource):
     def get(self):
@@ -69,14 +74,30 @@ class Gyms(Resource):
         )
 api.add_resource(Gyms, '/gyms')
 
-class Memberships(Resource):
+
+
+# @app.before_request
+# def check_if_logged_in:
+#     if not session['user_id']:
+#         return {'error': 'Unauthorized'}, 401
+
+
+
+class Memberships(Resource): 
+    
     def get(self):
+        if not session['user_id']:
+            return {'error': 'Unauthorized'}, 401
+
         memberships = Membership.query.all()
         return make_response(
             [membership.to_dict() for membership in memberships],
             200
         )
     def post(self):
+        if not session['user_id']:
+            return {'error': 'Unauthorized'}, 401
+        
         data = request.get_json()
         try:
             newMembership = Membership (
@@ -97,6 +118,10 @@ class Memberships(Resource):
 api.add_resource(Memberships, '/memberships')
 
 class UserById(Resource):
+
+
+
+
     def get(self, id):
         user = User.query.filter_by(id = id).first()
         if user == None:
@@ -104,6 +129,9 @@ class UserById(Resource):
         return make_response(user.to_dict(), 200)
     
     def delete(self, id):
+        if not session['user_id']:
+            return {'error': 'Unauthorized'}, 401
+        
         user = User.query.filter_by(id = id).first()
         if user == None:
             return make_response({"error":"user not found"}, 404)
@@ -112,6 +140,8 @@ class UserById(Resource):
         return make_response({"deleted": "she gone"}, 204)
     
     def patch(self, id):
+        if not session['user_id']:
+            return {'error': 'Unauthorized'}, 401
         user = User.query.filter_by(id = id).first()
         data = request.get_json()
         for attr in data:
@@ -149,12 +179,22 @@ class SignUp(Resource):
             age = age
 
         )
+       
         db.session.add(new_user)
         db.session.commit()
+        session['user_id'] = new_user.id
+
+        
+        
+
         return jsonify({
             "id": new_user.id,
-            "username": new_user.username
-        })
+            "username": new_user.username,
+            
+        }
+        
+        
+        )
 
 
 
@@ -172,7 +212,7 @@ class Login(Resource):
         
         elif user.authenticate(password):
             session['user_id'] = user.id
-            session_user.append(user.to_dict())
+            
             return make_response(
                 user.to_dict(),
                 200
@@ -193,6 +233,8 @@ class CheckSession(Resource):
 
 
 class Logout(Resource):
+
+   
 
     def delete(self): # just add this line!
         session['user_id'] = None

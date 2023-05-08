@@ -23,6 +23,27 @@ const linkStyles = {
 function Memberships({user}) {
 
     function handleGymChange(e) {
+        setiGym(e.target.value)
+        if (e.target.value === '1' && pprice == '1 Day Membership'){
+            setShowp("$1.00 USD")} 
+        else if (e.target.value === '1' && pprice == '1 Month Membership'){
+            setShowp("$150.00 USD")} 
+        else if (e.target.value === '1' && pprice == '3 Month Membership'){
+            setShowp("$400.00 USD")} 
+        else if (e.target.value === '1' && pprice == '1 Year Membership'){
+            setShowp("$1200.00 USD")} 
+         ///mexico
+        else if (e.target.value === '2' && pprice == '1 Day Membership'){
+            setShowp("$17.79 MXN")} 
+        else if (e.target.value === '2' && pprice == '1 Month Membership'){
+            setShowp("$2668.91 MXN")} 
+        else if (e.target.value === '2' && pprice == '3 Month Membership'){
+            setShowp("$7117.10 MXN")} 
+        else if (e.target.value === '2' && pprice == '1 Year Membership'){
+            setShowp("$21351.29 MXN")} 
+
+
+
         SetFormData({
           ...formData,
           gym_id: e.target.value,
@@ -31,17 +52,29 @@ function Memberships({user}) {
 
     const [pprice, setPprice] = useState("");
     const [showp, setShowp] = useState("");
+    const [iGym, setiGym] = useState("1")
 
         function handlePlanChange(e) {
             setPprice(e.target.value); // Update pprice based on selected option
-            if (e.target.value === '1 Day Membership'){
-                setShowp("$1.00")} 
-            else if (e.target.value === '1 Month Membership'){
-                setShowp("$150.00")} 
-            else if (e.target.value === '3 Month Membership'){
-                setShowp("$400.00")} 
-            else if (e.target.value === '1 Year Membership'){
-                setShowp("$1200.00")} 
+            if (e.target.value === '1 Day Membership' && iGym == "1"){
+                setShowp("$1.00 USD")} 
+            else if (e.target.value === '1 Month Membership' && iGym == "1"){
+                setShowp("$150.00 USD")} 
+        
+            else if (e.target.value === '3 Month Membership' && iGym == "1"){
+                setShowp("$400.00 USD")} 
+            else if (e.target.value === '1 Year Membership' && iGym == "1"){
+                setShowp("$1200.00 USD")} 
+             // Update showp based on gym selection
+            else if (e.target.value === '1 Day Membership' && iGym == "2"){
+                setShowp("$17.79 MXN")}     
+            else if (e.target.value === '1 Month Membership' && iGym == "2"){
+                setShowp("$2668.91 MXN")}    
+            else if (e.target.value === '3 Month Membership' && iGym == "2"){
+                setShowp("$7117.10 MXN")} 
+            else if (e.target.value === '1 Year Membership' && iGym == "2"){
+                setShowp("$21351.29 MXN")}             
+           
 
                     SetFormData({
                     ...formData,
@@ -349,17 +382,7 @@ function Memberships({user}) {
       </button>
     </form>
  */}
-   <NavLink
-                        exact to="/mbg"
-                        className="submit ui teal button"
-                        style={linkStyles}
-                        activeStyle={{
-                            background: "white",}}
-                        
-                    >
-                        Who Belongs to which Gym Location & their Membership package 
-                    </NavLink>
-
+   
 
    
 

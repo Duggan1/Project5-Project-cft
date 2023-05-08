@@ -43,8 +43,6 @@ function SignUp({handleSignupClick, onLogin}) {
         }
       })
         e.target.reset()
-        
-        
     }
     
     const setSignupState = (e) => {

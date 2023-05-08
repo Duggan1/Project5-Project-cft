@@ -1,6 +1,24 @@
 import React from "react";
 import { useState } from "react";
 // import {useNavigate} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
+
+
+
+
+const linkStyles2 = {
+    display: "inline-block",
+    height: "50px",
+    width: "200px",
+    // padding: "5px",
+    margin: "3px 6px 2px",
+    background: "red",
+    textDecoration: "none",
+    color: "WHITE",
+    textAlign:"center",
+    fontSize: "30px"
+    
+  };
 
 
 function Logout({ onLogout, user }) {
@@ -67,9 +85,22 @@ function Logout({ onLogout, user }) {
           </div>
 
         <h2>Welcome, {user.username}!</h2>
+        
         <button onClick={handleEdit}>Edit</button>
         <button onClick={handleLogout}>Logout</button>
         <button onClick={handleDelete}>Delete Account</button>
+        <br></br>
+        {user.username === "roberto" ? <NavLink
+                        exact to="/mbg"
+                        className="submit ui teal button"
+                        style={linkStyles2}
+                        activeStyle={{
+                            background: "white",}}
+                        
+                    >
+                        Gym's info 
+                    </NavLink>
+:null}
       </header>
   
       {edit ?
