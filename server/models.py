@@ -17,15 +17,34 @@ class User(db.Model, SerializerMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True)
-    _password_hash = db.Column(db.String)
-    email = db.Column(db.String)
-    phone = db.Column(db.String)
-    age = db.Column(db.Integer)
+    _password_hash = db.Column(db.String,nullable=False)
+    email = db.Column(db.String,nullable=False)
+    phone = db.Column(db.String,nullable=False)
+    age = db.Column(db.Integer,nullable=False)
     created_at = db.Column(db.DateTime, server_default = db.func.now())
     updated_at = db.Column(db.DateTime, onupdate = db.func.now())
 
     memberships = db.relationship('Membership', backref = 'user', cascade = 'all, delete-orphan')
     gyms = association_proxy('memberships', 'gym')
+
+    @validates( 'age' )
+    def Uage(self, key, value):
+        if len(value) < 1:
+            raise ValueError( 'Age too Low')
+        return value
+    @validates( 'phone' )
+    def Uphone(self, key, value):
+        if len(value) < 1:
+            raise ValueError( 'Phone # too short')
+        return value
+    @validates( 'email' )
+    def Uemail(self, key, value):
+        if len(value) < 1:
+            raise ValueError( 'email too short')
+        return value
+    
+
+
 
 
     # def __repr__(self):
@@ -45,16 +64,11 @@ class User(db.Model, SerializerMixin):
     def authenticate(self, password):
         return bcrypt.check_password_hash(
             self._password_hash, password.encode('utf-8'))
-    
-    @validates('_password')
-    def pass_hashing(self, key, attr):
-        password_hash = bcrypt.generate_password_hash(attr.encode('utf-8'))
-        return password_hash.decode('utf-8')
 
     @staticmethod
     def simple_hash(input):
         return sum(bytearray(input, encoding='utf-8'))
-
+    
     
 # ////nullable fo gym&user idbefore the push
 

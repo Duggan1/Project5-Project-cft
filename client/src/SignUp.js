@@ -10,8 +10,8 @@ function SignUp({handleSignupClick, onLogin}) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
-    const [phone, setPhone] = useState("")
-    const [age, setAge] = useState("")
+    const [phone, setPhone] = useState(null)
+    const [age, setAge] = useState(null)
     const navigate = useNavigate()
 
     if (session === false){

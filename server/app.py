@@ -102,7 +102,7 @@ class Memberships(Resource):
         try:
             newMembership = Membership (
             plan = data['plan'],
-            user_id = data["user_id"],
+            user_id = session['user_id'],
             gym_id = data["gym_id"]
 
 
@@ -170,16 +170,20 @@ class SignUp(Resource):
             return jsonify({"error": "User already exists"}), 409
 
         hashed_password = bcrypt.generate_password_hash(password)
-        new_user = User(
-            # name= name,
-            _password_hash=hashed_password,  
-            username=username,
-            email=email,
-            phone=phone,
-            age = age
-
-        )
-       
+        # ///////////try////////////
+        try:
+            new_user = User(
+                # name= name,
+                _password_hash=hashed_password,  
+                username=username,
+                email=email,
+                phone=phone,
+                age = age
+            )
+    #    ///////////except///////////
+        except ValueError:
+            return make_response({"error": "must be valid user length"}, 404)
+        
         db.session.add(new_user)
         db.session.commit()
         session['user_id'] = new_user.id
