@@ -1,93 +1,196 @@
-import React, {useState} from 'react'
-// import {Route} from 'react-router-dom'
-// import Home from './Home'
-import {useNavigate} from 'react-router-dom'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import * as yup from 'yup';
 
+function SignUp({ handleSignupClick, onLogin }) {
+  const [session, setSession] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState(null);
+  const [age, setAge] = useState(null);
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState({});
+  const [formValid, setFormValid] = useState(false);
 
-function SignUp({handleSignupClick, onLogin}) {
+  const validationSchema = yup.object().shape({
+    username: yup.string().required('Username is required'),
+    password: yup
+      .string()
+      .required('Password is required')
+      .min(6, 'Password must be 6 characters long')
+      .matches(/[0-9]/, 'Password requires a number')
+      .matches(/[a-z]/, 'Password requires a lowercase letter')
+      .matches(/[A-Z]/, 'Password requires an uppercase letter')
+      .matches(/[^\w]/, 'Password requires a symbol'),
+    email: yup.string().email('Invalid email').required('Email is required'),
+    phone: yup.string().required('Phone number is required'),
+    age: yup
+      .number()
+      .required('Age is required')
+      .positive('Age must be a positive number')
+      .integer('Age must be an integer'),
+  });
 
-    const [session, setSession] = useState(false)
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
-    const [email, setEmail] = useState("")
-    const [phone, setPhone] = useState(null)
-    const [age, setAge] = useState(null)
-    const navigate = useNavigate()
-
-    if (session === false){
+  const handleSubmit = (e) => {
+    e.preventDefault();
   
-    const user = {
-      username: username,
-      password: password,
-      email: email,
-      phone: phone,
-      age: age
-    }
-    
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      fetch("/signup", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(user)
-      })
-      .then(r => {
-        if (r.ok){
-          r.json()
-          .then( console.log('success'))
-          setSession(!session)
-          onLogin(user)
-          navigate('/')
-        } else {
-          console.log('failure')
-        }
-      })
-        e.target.reset()
-    }
-    
-    const setSignupState = (e) => {
-        handleSignupClick(e)
-    }
+    validationSchema
+      .validate(
+        {
+          username,
+          password,
+          email,
+          phone,
+          age,
+        },
+        { abortEarly: false }
+      )
+      .then(() => {
+        // form is valid, submit it or do something else
+        setFormValid(true);
   
-    return (
-      <div>
-      <div class="ui center aligned huge header" style={{margin:40}}>Welcome !</div>
+        const user = {
+          username: username,
+          password: password,
+          email: email,
+          phone: phone,
+          age: age,
+        };
+  
+        fetch('/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(user),
+        }).then((r) => {
+          if (r.ok) {
+            r.json().then(console.log('success'));
+            setSession(!session);
+            onLogin(user);
+            navigate('/');
+          } else {
+            console.log('failure');
+          }
+        });
+      })
+      .catch((err) => {
+        // form is invalid, set the validation errors
+        const validationErrors = {};
+        err.inner.forEach((error) => {
+          validationErrors[error.path] = error.message;
+        });
+        setErrors(validationErrors);
+      });
+  
+    e.target.reset();
+  };
+  
+
+  const setSignupState = (e) => {
+    handleSignupClick(e);
+  };
+
+  return (
+    <div>
+      <div class="ui center aligned huge header" style={{ margin: 40 }}>
+        Welcome to CFT  !
+      </div>
       <div className="new-user-form">
         <div class="ui sizer vertical segment">
-          <h2 class="ui center aligned large header" >Create a New Account</h2>
-        </div>
-        <form class='ui form' onSubmit={handleSubmit}>
-          <div class='field'>
-            <input onChange={(e) => setUsername(e.target.value)} type="text" name="username" placeholder="Username" />
+          <form onSubmit={handleSubmit} class="ui large form" style={{ margin: 40 }}>
+            <div class="ui stacked segment">
+              <div class="field">
+                <div >
+                  <i class="user icon"></i>
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                </div>
+                {errors.username && (
+                  <div className="ui pointing red basic label">{errors.username}</div>
+                )}
+              </div>
+              <div class="field">
+                <div >
+                  <i class="lock icon"></i>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
+                {errors.password && (
+                  <div className="ui pointing red basic label">{errors.password}</div>
+                )}
+              </div>
+              <div class="field">
+                <div >
+                  <i class="envelope icon"></i>
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                {errors.email && (
+                  <div className="ui pointing red basic label">{errors.email}</div>
+                )}
+              </div>
+              <div class="field">
+                <div >
+                  <i class="phone icon"></i>
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
+                </div>
+                {errors.phone && (
+                  <div className="ui pointing red basic label">{errors.phone}</div>
+                )}
+              </div>
+              <div >
+                <div >
+                  <i class="calendar icon"></i>
+                  <input
+                    type="number"
+                    name="age"
+                    min="5"
+                    // max="99"
+                    placeholder="Age"
+                    value={age}
+                    onChange={(e) => setAge(e.target.value)}
+                  />
+                </div>
+                {errors.age && (
+                  <div >{errors.age}</div>
+                )}
+              </div>
+              <button type="submit" class="ui fluid large teal submit button">
+                Sign up
+              </button>
+            </div>
+          </form>
+          <div class="ui message">
+            Already have an account?{' '}
+            <a href="#" onClick={setSignupState}>
+              Log in
+            </a>
           </div>
-          <div class='field'>
-            <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" placeholder="Password" />
-          </div>
-          <div class='field'>
-            <input onChange={(e) => setEmail(e.target.value)} type="text" name="email" placeholder="E-mail" />
-          </div>
-          <div class='field'>
-            <input onChange={(e) => setPhone(e.target.value)} type="text" name="phone" placeholder="Phone #" />
-          </div>
-          <div class='field'>
-            <input onChange={(e) => setAge(e.target.value)} type="number" min="5" name="age" placeholder="Age" />
-          </div>
-            <button class='fluid ui button' type="submit">Submit</button>
-        </form>
-        <div class='ui basic buttons'>
-            <button class="ui button" onClick={setSignupState}>Return to Login</button>
         </div>
       </div>
-      </div>
-    );
-    }
-    else {
-        return (
-            
-            navigate('/')
-            
-        )
-    }
+    </div>
+  );
 }
 
 export default SignUp;

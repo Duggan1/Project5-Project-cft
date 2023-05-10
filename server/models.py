@@ -74,7 +74,7 @@ class User(db.Model, SerializerMixin):
 
 class Membership(db.Model, SerializerMixin):
     __tablename__ = 'memberships'
-    serialize_rules= ("-created_at", "-updated_at", "-user_id","-user._password_hash", "-user.id","-gym.address","-gym.phone","-gym.id","-gym_id")
+    serialize_rules= ( "created_at","-updated_at", "-user_id","-user._password_hash", "-user.id","-gym.address","-gym.phone","-gym.id","-gym_id")
 
     id = db.Column(db.Integer, primary_key = True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'),nullable=False)
@@ -83,17 +83,27 @@ class Membership(db.Model, SerializerMixin):
     created_at = db.Column(db.DateTime, server_default = db.func.now())
     updated_at = db.Column(db.DateTime, onupdate = db.func.now())
 
+    # @validates('user_id')
+    # def user_id(self, key, id):
+    #     if not User.query.get(id):
+    #         raise ValueError('Invalid user ID')
+    #     return id
+    
+    # /////////plan validates in list of options 
     @validates( 'plan' )
-    def planmustbeone(self, key, value):
-        if len(value) < 1:
-            raise ValueError( 'too short')
-        return value
+    def validate_study( self, key, plan ):
+        options = [ '1 Day Membership', '1 Month Membership', '3 Month Membership', '1 Year Membership' ]
+        if plan not in options:
+            raise ValueError( 'plan must be in options!!!' )
+        return plan
+    
+
 
 
 
 class Gym(db.Model, SerializerMixin):
     __tablename__ = 'gyms'
-    serialize_rules= ("-created_at", "-updated_at", "-memberships","users","plans")
+    serialize_rules= ( "-updated_at", "-memberships","users","plans","created_at")
 
     id = db.Column(db.Integer, primary_key = True)
     city = db.Column(db.String)
@@ -103,6 +113,7 @@ class Gym(db.Model, SerializerMixin):
     memberships = db.relationship('Membership', backref = 'gym', cascade = 'all, delete-orphan')
     users = association_proxy('memberships', 'user')
     plans = association_proxy('memberships', 'plan')
+    created_at = association_proxy('memberships', 'created_at')
     
 
 

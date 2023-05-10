@@ -32,6 +32,13 @@ function Mbg() {
                 </li>
               ))}
             </ul>
+            <ul className="rightList">
+              {gym.created_at.map(created_ats => (
+                <li >
+                  <p>{created_ats}</p>
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
