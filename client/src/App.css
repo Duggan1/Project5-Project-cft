@@ -19,8 +19,13 @@
   background-size: 100%;
 }
 .about img{
-	width: 260px;
-  	height: 160px;
+	width: 460px;
+  	height: 360px;
+}
+.jiujitsu img {
+	width: 860px;
+  	height: 560px;
+
 }
 .about {
 	background-color: black;
@@ -29,7 +34,23 @@
 	align-items: center;
 	text-align: center;
 	margin-top: -25px;
+	justify-content: center;
+	width: 100%;
 }
+#fbheader {
+	width: 860px;
+  	height: 460px;
+}
+
+.about p {
+	line-height: 1.5; /* increase the line height for better readability */
+	margin-bottom: 1em; /* add some space between paragraphs */
+	max-width: 800px;
+	display: inline-block;
+	text-align: center;
+}
+
+
 .cftlogo {
   width: 160px;
   height: 160px;
@@ -67,9 +88,6 @@
 	color:white;
 	margin-bottom: -25px;
 	
-	
-	/* padding-left: 100px;
-	margin-left: 10px; */
 }
 
 .jiujitsu {
@@ -79,9 +97,13 @@
 	color:white;
 	text-align: center;
 	margin-bottom: -16px;
-	
-
-	
+}
+.jiujitsu p {
+	line-height: 1.5; /* increase the line height for better readability */
+	margin-bottom: 1em; /* add some space between paragraphs */
+	max-width: 800px;
+	display: inline-block;
+	text-align: center;
 }
 .rightList {
 	text-align: right;
@@ -141,10 +163,6 @@ ul {
 }
 .navLink {
 	background-color: black;
-  	/* padding-top: 50px;
-  	padding-bottom: 50px;
-  	padding-left: 45px;
-  	padding-right: 25px; */
   	display: flex;
   	flex-direction: row;
   	justify-content: space-between;

@@ -252,7 +252,7 @@ function Memberships({user}) {
 
         let pic2 = "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
         if (formData.gym_id === "1"){
-            pic2 = "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
+            pic2 = "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=psR6lCP8lxcAX8-1g3Y&_nc_ht=scontent-ord5-1.xx&oh=00_AfDDVGZbFvmD_CYLadhqv30p96nwuTV9qMGUgR5Wek7qzg&oe=6461826B"
         }
         if (formData.gym_id === "2"){
             pic2 = "https://scontent-ord5-2.xx.fbcdn.net/v/t1.6435-9/172729431_143343254458624_1812354647126060410_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=9YlZuf9VTy4AX-WVdJi&_nc_ht=scontent-ord5-2.xx&oh=00_AfC1-X05BhccsRWoKHlDXRKtC5-hXGr9LxJdqFO-c0aYZQ&oe=647CB888"

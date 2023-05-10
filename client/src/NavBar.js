@@ -50,17 +50,6 @@ function NavBar({user}) {
                     </NavLink>
                     <br />
                     <NavLink
-                        exact to="/aboutUs"
-                        className="submit ui teal button"
-                        style={linkStyles}
-                        activeStyle={{
-                            background: "white",}}
-                        
-                    >
-                        About CFT 
-                    </NavLink>
-                    <br />
-                    <NavLink
                         exact to="/jiujitsu"
                         className="submit ui teal button"
                         style={linkStyles}
@@ -71,7 +60,18 @@ function NavBar({user}) {
                         Jiu-Jitsu 
                     </NavLink>
                     <br />
-
+                    <NavLink
+                        exact to="/aboutUs"
+                        className="submit ui teal button"
+                        style={linkStyles}
+                        activeStyle={{
+                            background: "white",}}
+                        
+                    >
+                        About CFT 
+                    </NavLink>
+                    <br />
+                    
                     {user ? null :
                     <NavLink
                         exact to="/signup"
