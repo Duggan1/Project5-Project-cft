@@ -9,6 +9,7 @@ const linkStyles = {
     background: "black",
     textDecoration: "none",
     color: "red",
+   
     
   };
 
@@ -40,16 +41,6 @@ function NavBar({user}) {
                     </NavLink>
                     <br />
                     <NavLink
-                        exact to="/memberships"
-                        className="submit ui teal button"
-                        style={linkStyles}
-                        activeStyle={{
-                            background: "white",}}
-                    >
-                        Memberships
-                    </NavLink>
-                    <br />
-                    <NavLink
                         exact to="/jiujitsu"
                         className="submit ui teal button"
                         style={linkStyles}
@@ -59,6 +50,17 @@ function NavBar({user}) {
                     >
                         Jiu-Jitsu 
                     </NavLink>
+                    <br />
+                    <NavLink
+                        exact to="/memberships"
+                        className="submit ui teal button"
+                        style={linkStyles}
+                        activeStyle={{
+                            background: "white",}}
+                    >
+                        Memberships
+                    </NavLink>
+                   
                     <br />
                     <NavLink
                         exact to="/aboutUs"

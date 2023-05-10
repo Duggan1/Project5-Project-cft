@@ -14,10 +14,10 @@ function Home() {
   
   
     return (
-      <div className = "home" >
+      <div  >
         
         {chiTown ?
-        <div>
+        <div className = "home">
         <h1>Welcome Home</h1>
         
             <h1>Chicago Fight Team</h1>
@@ -36,7 +36,7 @@ function Home() {
 
                 ></iframe>
                 </center>
-                </div> : <div>
+                </div> : <div className="home2"><div className="fish">
         <h1>Welcome Home</h1>
         
             <h1>Chicago Fight Team </h1>
@@ -56,7 +56,7 @@ function Home() {
 
                 ></iframe>
                 </center>
-                </div> 
+                </div></div> 
         
        }</div>
     );
