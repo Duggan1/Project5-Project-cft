@@ -267,7 +267,7 @@ function Memberships({user}) {
             //   src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
               src={pic2}
               alt="The cover of Stubborn Attachments"
-              height="360px"
+              height="460px"
               width="760px"
             />
             <div className="description">
@@ -334,7 +334,7 @@ function Memberships({user}) {
             //   src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
               src={pic2}
               alt="The cover of Stubborn Attachments"
-              height="360px"
+              height="460px"
               width="760px"
             />
             <div className="description">

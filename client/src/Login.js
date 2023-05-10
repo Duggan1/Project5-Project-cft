@@ -15,15 +15,6 @@ function Login({ onLogin }) {
     const toggleIncorrect =()=>{
         setIsIncorrect(!isIncorrect)
     }
-
-    // if (session === false){
-    
-    // // const newUser = {
-    // //   username: username,
-    // //   password: password,
-    // // }
-
-    // sessionUser.push(newUser)
   
     function handleSubmit(e) {
         e.preventDefault();
@@ -49,9 +40,7 @@ function Login({ onLogin }) {
     }
     return (
         <div className="acct">
-                    <center>
-            <div className="cftlogo" ></div>
-            </center>
+                    
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -71,6 +60,9 @@ function Login({ onLogin }) {
             <h2>Username or Password Invalid, Please Try Again!</h2>
         </div>: null}
       </form>
+      <center>
+            <div className="cftlogo" ></div>
+            </center>
       </div>
     );
   }

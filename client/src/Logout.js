@@ -78,9 +78,7 @@ function Logout({ onLogout, user }) {
       <header>
       
           <div>
-          <center>
-            <div className="cftlogo" ></div>
-            </center>
+          
             {/* <h1>CFT Header</h1> */}
           </div>
 
@@ -127,6 +125,9 @@ function Logout({ onLogout, user }) {
           <button class='fluid ui button' type="submit">Submit</button>
         </form>
       : null}
+      <center>
+            <div className="cftlogo" ></div>
+            </center>
       </div>
       
     </>

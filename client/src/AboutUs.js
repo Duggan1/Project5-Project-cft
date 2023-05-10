@@ -6,7 +6,7 @@ function AboutUs() {
   return (
     
     <div className="about">
-   <h1>CFT Story</h1>
+   
    
     <img id="fbheader" src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/300598537_566623515304906_8998417771956998404_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=3-ObyzMVjIEAX9FmHPo&_nc_ht=scontent-ord5-1.xx&oh=00_AfBE4dycuBnMc0zoPtvu2ix1FReVCBZyEkLomjSzDTaGtA&oe=6461417B" alt="https://www.facebook.com/photo.php?fbid=566623528638238&set=pb.100058717881485.-2207520000.&type=3"/><br></br>
    
