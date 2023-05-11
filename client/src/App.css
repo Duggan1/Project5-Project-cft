@@ -160,7 +160,7 @@ ul {
 	color:white;
 	text-align: right;
 	background-size: cover;
-	margin-top: -20px;
+	margin-top: -10px;
 	
 
 }
@@ -170,7 +170,7 @@ ul {
   	flex-direction: row;
   	justify-content: space-between;
 	  text-align: center;
-	  font-weight: 900;
+	  font-weight: 800;
 	  /* text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); */
 }
 
@@ -182,18 +182,22 @@ ul {
 }
 .home {
 	/* background-color: black; */
-	color:black;
+	color:rgb(255, 245, 245);
 	text-align: center;
 	font-weight: 900;
-	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   }
 .fish {
 	background-color: rgba(0, 0, 0, 0.268);
 	background-size:auto;
 	font-weight: 900;
-	text-shadow: 2px 2px 4px rgba(249, 247, 247, 0.5);
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	/* margin-left: 250px;
 	margin-right: 250px; */
+}
+button {
+	border: 3px solid black ;
 }
 
 .home2 {

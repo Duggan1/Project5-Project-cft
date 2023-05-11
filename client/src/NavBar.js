@@ -5,7 +5,7 @@ const linkStyles = {
     display: "inline-block",
     width: "100px",
     padding: "19px",
-    margin: "0 6px 2px",
+    margin: "0 6px 5px",
     background: "rgb(9, 8, 8)",
     textDecoration: "none",
     color: "red",

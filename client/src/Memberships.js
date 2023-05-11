@@ -315,7 +315,7 @@ function Memberships({user}) {
       </button>
     </form>
  */}
-   <NavLink
+   {/* <NavLink
                         exact to="/mbg"
                         className="submit ui teal button"
                         style={linkStyles}
@@ -324,7 +324,7 @@ function Memberships({user}) {
                         
                     >
                         Who Belongs to which Gym Location & their Membership package 
-                    </NavLink>
+                    </NavLink> */}
 
 
    
