@@ -19,8 +19,7 @@ function Schedule() {
     { chiTown ? <div className="sjs">
         
         <center>
-            <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/309841233_591565279477396_7528783065902489959_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=ANUBBc5bZNYAX_vQAI2&_nc_ht=scontent-ord5-1.xx&oh=00_AfBmf440YhlputJljZVbjbSoXNbnvr73e-OGx9u6jhgNlQ&oe=645E45E8"alt="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/309841233_591565279477396_7528783065902489959_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=ANUBBc5bZNYAX_vQAI2&_nc_ht=scontent-ord5-1.xx&oh=00_AfBmf440YhlputJljZVbjbSoXNbnvr73e-OGx9u6jhgNlQ&oe=645E45E8" />
-        </center>
+            <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/309841233_591565279477396_7528783065902489959_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=CXRBw2RTuAIAX-Z4-X7&_nc_ht=scontent-ord5-1.xx&oh=00_AfAGdGuReCsizzbZCegWu_hm1KVgPmAbMvZTMMwihGAoUA&oe=646434A8"alt="https://www.facebook.com/photo.php?fbid=591565182810739&set=pb.100058717881485.-2207520000.&type=3" /></center>
         <center><button onClick={toggleGym}>Show me the other CFT Location</button></center>
         
     </div> :  <div className="sjs">

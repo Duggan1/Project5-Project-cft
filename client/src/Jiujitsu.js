@@ -47,7 +47,7 @@ In conclusion, Chicago Fight Team's Jiu-Jitsu program offers an excellent opport
  <br></br><img src="https://scontent-ord5-2.xx.fbcdn.net/v/t1.6435-9/197183453_10165206359765058_6480982257001251006_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Itjc0hsAogEAX9K_daf&_nc_ht=scontent-ord5-2.xx&oh=00_AfDKAXsohSunkDYw6MgNoyUIgglegewJ5Ys1z5eiF2MDow&oe=647BCFD9" alt="https://scontent-ord5-2.xx.fbcdn.net/v/t1.6435-9/197183453_10165206359765058_6480982257001251006_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Itjc0hsAogEAX9K_daf&_nc_ht=scontent-ord5-2.xx&oh=00_AfDKAXsohSunkDYw6MgNoyUIgglegewJ5Ys1z5eiF2MDow&oe=647BCFD9" />
    
     </center>
-    <p>jiujitsu stuff</p>
+    <p>   </p>
     </div>
     
     
