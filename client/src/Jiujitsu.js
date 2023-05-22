@@ -16,14 +16,11 @@ return (
 
     <div className="jiujitsu">
         <h1>Jiu-Jitsu</h1>
-    
     <center>
-         <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/334247507_718371939740967_1421760906699961986_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=TzybcF2PKM0AX-6SQzZ&_nc_ht=scontent-ord5-1.xx&oh=00_AfCtQMio2i2ZQ3Xxew8VY7WnPJMMX4lxKinoK9rJUZyFeA&oe=64604D53" alt="https://www.facebook.com/photo.php?fbid=716847606949162&set=pb.100058717881485.-2207520000.&type=3"/>
-         {/* <img src="https://images.tapology.com/gyms/logos/1168/profile/1168-chicago-fight-team.jpg?1656434969" alt="https://images.tapology.com/gyms/logos/1168/profile/1168-chicago-fight-team.jpg?1656434969" /> */}
+         < div className='nickB'></div>
 
-
-        <h2>Jiu-Jitsu</h2>
-        <h3>Welcome to Chicago Fight Team's Jiu-Jitsu Program!</h3>
+        
+        <h3>Welcome to Chicago Fight Team's</h3><h3> Jiu-Jitsu Program!</h3>
         <p>Our program is designed for individuals of all levels who are passionate about learning and practicing Brazilian Jiu-Jitsu. Whether you are a beginner or an advanced practitioner, our world-class instructors are dedicated to helping you achieve your goals and become the best version of yourself.
 
 At Chicago Fight Team, we believe that Jiu-Jitsu is not just a sport but a way of life. Our program is based on the principles of respect, discipline, and perseverance, which we believe are essential for achieving success on and off the mat. We take pride in creating a positive and inclusive training environment where everyone is welcome, and our members are more than just training partners, but also part of our extended family.

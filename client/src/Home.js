@@ -18,7 +18,7 @@ function Home() {
         
         {chiTown ?
         <div className = "home">
-        <h1>Welcome Home</h1>
+        <h2>Welcome Home</h2>
         
             <h1>Chicago Fight Team</h1>
             <p>6528 S Lavernge Ave Chicago, Illinois</p>
@@ -37,7 +37,7 @@ function Home() {
                 ></iframe>
                 </center>
                 </div> : <div className="home2"><div className="fish">
-        <h1>Welcome Home</h1>
+        <h2>Welcome Home</h2>
         
             <h1>Chicago Fight Team </h1>
             <h2>Guadalajara</h2>

@@ -250,9 +250,9 @@ function Memberships({user}) {
             mex = false
         }
 
-        let pic2 = "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
+        let pic2 = "./Images/341260897_241927845028189_3175328261831266190_n.jpeg"
         if (formData.gym_id === "1"){
-            pic2 = "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=psR6lCP8lxcAX8-1g3Y&_nc_ht=scontent-ord5-1.xx&oh=00_AfDDVGZbFvmD_CYLadhqv30p96nwuTV9qMGUgR5Wek7qzg&oe=6461826B"
+            pic2 = "./Images/341260897_241927845028189_3175328261831266190_n.jpeg"
         }
         if (formData.gym_id === "2"){
             pic2 = "https://scontent-ord5-2.xx.fbcdn.net/v/t1.6435-9/172729431_143343254458624_1812354647126060410_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=9YlZuf9VTy4AX-WVdJi&_nc_ht=scontent-ord5-2.xx&oh=00_AfC1-X05BhccsRWoKHlDXRKtC5-hXGr9LxJdqFO-c0aYZQ&oe=647CB888"
@@ -263,13 +263,7 @@ function Memberships({user}) {
   return (
     < >
     {mex ? <div className='memberships1' ><div className="product">
-            <img
-            //   src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
-              src={pic2}
-              alt="The cover of Stubborn Attachments"
-              height="460px"
-              width="760px"
-            />
+            <center><div className='aril'></div></center>
             <div className="description">
             <h1>Chicago Fight Team </h1>
             {/* <h5>{pprice}</h5> */}
@@ -330,15 +324,9 @@ function Memberships({user}) {
    
 
         </div> :<div className='memberships2' ><div className="product">
-            <img
-            //   src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/341260897_241927845028189_3175328261831266190_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qzJhyaEkV-QAX9dIxEI&_nc_ht=scontent-ord5-1.xx&oh=00_AfAA_pTCbJlcSpTauTEaCOTNInQIU_9RAyboy3xbaCJ88g&oe=6459996B"
-              src={pic2}
-              alt="The cover of Stubborn Attachments"
-              height="460px"
-              width="760px"
-            />
+        <center><div className='notAril'></div></center>
             <div className="description">
-            <h1>Chicago Fight Team </h1>
+            <h1>Chicago Fight Team Guadalajara</h1>
             {/* <h5>{pprice}</h5> */}
             </div></div>
     <form class="card-form" onSubmit={ handleSubmit }>

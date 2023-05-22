@@ -82,12 +82,13 @@ function Logout({ onLogout, user }) {
             {/* <h1>CFT Header</h1> */}
           </div>
 
-        <h2>Welcome, {user.username}!</h2>
+        
         
         <button onClick={handleEdit}>Edit</button>
         <button onClick={handleLogout}>Logout</button>
         <button onClick={handleDelete}>Delete Account</button>
         <br></br>
+        <h2>Welcome, {user.username}!</h2>
         {user.username === "roberto" ? <NavLink
                         exact to="/mbg"
                         className="submit ui teal button"
