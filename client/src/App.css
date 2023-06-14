@@ -210,6 +210,15 @@
 	font-size: 18px;
 	
 }
+.jiujitsuT {
+	width: 860px;
+  	height: 560px;
+	background-image: url("./Images/jiujitsuT.jpeg");
+  	background-repeat: no-repeat;
+ 	background-size: 100%;
+	margin-bottom: -20px;
+
+}
 .about p {
 	line-height: 2.0; /* increase the line height for better readability */
 	margin-bottom: 1em; /* add some space between paragraphs */

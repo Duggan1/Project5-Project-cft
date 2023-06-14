@@ -41,8 +41,7 @@ Our kids' Jiu-Jitsu program is an excellent way to introduce your children to th
 
 In conclusion, Chicago Fight Team's Jiu-Jitsu program offers an excellent opportunity for individuals of all ages to learn and practice Brazilian Jiu-Jitsu. Our program is designed to help you achieve your goals, whether you're looking to compete at the highest level or just looking to stay active and have fun. With our experienced instructors, world-class facilities, and welcoming community, we are confident that you will find everything you need to succeed in your Jiu-Jitsu journey at Chicago Fight Team. Sign up for a free trial today and discover the benefits of Jiu-Jitsu for yourself!</p>
 
- <br></br><img src="https://scontent-ord5-2.xx.fbcdn.net/v/t1.6435-9/197183453_10165206359765058_6480982257001251006_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Itjc0hsAogEAX9K_daf&_nc_ht=scontent-ord5-2.xx&oh=00_AfDKAXsohSunkDYw6MgNoyUIgglegewJ5Ys1z5eiF2MDow&oe=647BCFD9" alt="https://scontent-ord5-2.xx.fbcdn.net/v/t1.6435-9/197183453_10165206359765058_6480982257001251006_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Itjc0hsAogEAX9K_daf&_nc_ht=scontent-ord5-2.xx&oh=00_AfDKAXsohSunkDYw6MgNoyUIgglegewJ5Ys1z5eiF2MDow&oe=647BCFD9" />
-   
+ <br></br> < div className='jiujitsuT'></div>
     </center>
     <p>   </p>
     </div>
