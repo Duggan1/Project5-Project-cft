@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.40fd580b.css",
+    "main.js": "/static/js/main.08fa2f56.js",
+    "static/media/chicago.jpeg": "/static/media/chicago.2aa3a4a0db1316f81e25.jpeg",
+    "static/media/clou.jpeg": "/static/media/clou.86bf2a2bc324df9b52fe.jpeg",
+    "static/media/341260897_241927845028189__n.jpeg": "/static/media/341260897_241927845028189_3175328261831266190_n.6ad412fda4501a075cba.jpeg",
+    "static/media/jiujitsuT.jpeg": "/static/media/jiujitsuT.c08f679e7bee0b53ce85.jpeg",
+    "static/media/cBelal.jpeg": "/static/media/cBelal.ebec680a54098d4a627f.jpeg",
+    "static/media/172729431_143343254458624__n.jpeg": "/static/media/172729431_143343254458624_1812354647126060410_n.3e050e839763ebdc9601.jpeg",
+    "static/media/mexS.jpeg": "/static/media/mexS.4063da99043aa9eaff5a.jpeg",
+    "static/media/mexico.jpeg": "/static/media/mexico.ad1fdd83f4987f7f1bbe.jpeg",
+    "static/media/CFTS.jpeg": "/static/media/CFTS.ecc116b5f3cfc84c8fae.jpeg",
+    "static/media/311418186_605498071417450__n.jpeg": "/static/media/311418186_605498071417450_3221258606596039093_n.66c8b0cf3842282635b9.jpeg",
+    "static/media/guadalajara.jpeg": "/static/media/guadalajara.6873d50ae87b90d36fd8.jpeg",
+    "static/media/nickB.jpeg": "/static/media/nickB.ec0ef5e4ebe2120611c7.jpeg",
+    "static/media/aboutheader.jpeg": "/static/media/aboutheader.25bc288c40363f91c5df.jpeg",
+    "static/media/jd.jpeg": "/static/media/jd.a9b03d44cbfdcd95476c.jpeg",
+    "static/media/horacio.jpeg": "/static/media/horacio.39a4edd75663f0eb0e90.jpeg",
+    "static/media/tester.jpeg": "/static/media/tester.1c8cd34a114e3275bf69.jpeg",
+    "static/media/oldCft.jpeg": "/static/media/oldCft.02e186689fa0e82d25f1.jpeg",
+    "index.html": "/index.html",
+    "main.40fd580b.css.map": "/static/css/main.40fd580b.css.map",
+    "main.08fa2f56.js.map": "/static/js/main.08fa2f56.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40fd580b.css",
+    "static/js/main.08fa2f56.js"
+  ]
+}
