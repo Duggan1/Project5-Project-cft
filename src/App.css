@@ -1,8 +1,40 @@
 
+/* Default styles for all devices */
 * {
-    /* background: #6f6f6f; */
-    font-family: Trebuchet MS;
-   
+  font-family: Trebuchet MS;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+  .chiS,
+  .mexS {
+    width: 100%;
+    height: auto;
+  }
+
+  .about img,
+  .jiujitsu img,
+  .nickB,
+  .aril,
+  .notAril,
+  .blou,
+  .clou,
+  .cbelal,
+  .jd,
+  .horacio,
+  .cftlogo {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+
+  .about p,
+  .jiujitsu p {
+    max-width: 100%;
+  }
+
+  /* Add more styles for other elements as needed */
+
 
 }
 .App {
