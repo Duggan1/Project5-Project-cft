@@ -11,6 +11,7 @@ const linkStyles = {
     background: "rgb(9, 8, 8)",
     textDecoration: "none",
     color: "red",
+    textOverflow: "clip",
     
   };
 function NavBar({user}) {
@@ -56,7 +57,7 @@ function NavBar({user}) {
                         className="submit ui teal button"
                         style={linkStyles}
                         activeStyle={{
-                            background: "white",}}
+                            background: "white",textOverflow: "clip"}}
                     >
                         Memberships
                     </NavLink>

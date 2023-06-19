@@ -42,7 +42,7 @@
 	  padding: 10px;
 	  /* width: 100%; */
 	  text-align: center;
-	  text-size-adjust: ;
+	  font-size: small;
 	}
   
 	.chiS,
@@ -284,7 +284,7 @@
   
 	.footer p {
 	  font-size: 14px;
-	  margin-bottom: 10px;
+	  /* margin-bottom: 10px; */
 	}
   
   
@@ -633,10 +633,10 @@ ul {
 }
 
 .input-label {
-	color: #8597a3;
+	color: #000000;
 	position: absolute;
 	top: 1.5rem;
-	transition: .25s ease;
+	/* transition: .25s ease; */
 }
 .home {
 	/* background-color: black; */
