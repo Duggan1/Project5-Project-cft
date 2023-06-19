@@ -6,6 +6,7 @@ const linkStyles = {
     display: "block",
     padding: "12px",
     width: "100px",
+    maxWidth: "15%",
     // margin: "0 6px ",
     background: "rgb(9, 8, 8)",
     textDecoration: "none",
