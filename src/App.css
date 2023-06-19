@@ -1,42 +1,263 @@
-
 /* Default styles for all devices */
 * {
-  font-family: Trebuchet MS;
-}
-
-/* Styles for mobile devices */
-@media (max-width: 767px) {
-  .chiS,
+	font-family: Trebuchet MS;
+  }
+  
+  /* Styles for mobile devices */
+  @media (max-width: 767px) {
+	.navbar {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.navLink {
+	  margin-top: 10px;
+	}
+  
+	.navLink a {
+	  margin: 6px 0;
+	  padding: 10px;
+	  width: 150px;
+	  text-align: center;
+	}
+  
+	.chiS,
+	.mexS {
+	  width: 100%;
+	  height: auto;
+	}
+  
+	.about img,
+	.jiujitsu img {
+	  width: 100%;
+	  height: auto;
+	}
+  
+	.nickB,
+	.aril,
+	.notAril,
+	.blou,
+	.clou,
+	.cbelal,
+	.jd,
+	.horacio,
+	.cftlogo {
+	  width: 100%;
+	  height: auto;
+	  background-size: cover;
+	}
+  
+	.foot img {
+	  width: 100%;
+	  height: auto;
+	}
+  
+	.home h1,
+	.home2 h1 {
+	  font-size: 40px;
+	}
+  
+	.jiujitsu h1 {
+	  font-size: 60px;
+	}
+  
+	.jiujitsu h3,
+	.instructors h3,
+	.memberships h3,
+	.schedule h3 {
+	  font-size: 20px;
+	}
+  
+	.jiujitsuT {
+	  width: 100%;
+	  height: auto;
+	  background-size: 100%;
+	  margin-bottom: 0;
+	}
+  
+	.jiujitsu p,
+	.about p {
+	  font-size: 14px;
+	  max-width: 100%;
+	}
+  
+	/* Add more styles for other elements as needed */
+  }
+  
+  .App {
+	text-align: center;
+  }
+  
+  .sjs {
+	background-color: black;
+  }
+  
+  .chiS {
+	width: 100%;
+	height: auto;
+	background-image: url("./Images/CFTS.jpeg");
+	background-repeat: no-repeat;
+	background-size: contain;
+  }
+  
   .mexS {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
+	background-image: url("./Images/mexS.jpeg");
+	background-repeat: no-repeat;
+	background-size: contain;
   }
-
-  .about img,
-  .jiujitsu img,
-  .nickB,
-  .aril,
-  .notAril,
-  .blou,
-  .clou,
-  .cbelal,
-  .jd,
-  .horacio,
-  .cftlogo {
-    width: 100%;
-    height: auto;
-    background-size: cover;
+  
+  .about img {
+	width: 100%;
+	height: auto;
+	z-index: 1;
   }
-
-  .about p,
-  .jiujitsu p {
-    max-width: 100%;
+  
+  .jiujitsu img {
+	width: 100%;
+	height: auto;
   }
-
+  
+  .nickB {
+	width: 100%;
+	height: auto;
+	background-image: url("./Images/nickB.jpeg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-top: -55px;
+  }
+  
+  .aril {
+	width: 100%;
+	height: auto;
+	background-image: url("./Images/341260897_241927845028189_3175328261831266190_n.jpeg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+  }
+  
+  .notAril {
+	width: 100%;
+	height: auto;
+	background-image: url("./Images/172729431_143343254458624_1812354647126060410_n.jpeg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+  }
+  
+	.about {
+	  background-color: black;
+	  background-size: cover;
+	  color: white;
+	  align-items: center;
+	  text-align: center;
+	  justify-content: center;
+	  padding: 20px;
+	}
+  
+	.about h1 {
+	  font-size: 30px;
+	}
+  
+	.about p {
+	  font-size: 16px;
+	  margin-bottom: 20px;
+	}
+  
+	.jiujitsu {
+	  background-color: black;
+	  color: white;
+	  padding: 20px;
+	  text-align: center;
+	}
+  
+	.jiujitsu h1 {
+	  font-size: 40px;
+	  margin-top: 0;
+	  margin-bottom: 20px;
+	}
+  
+	.jiujitsu h3 {
+	  font-size: 16px;
+	  margin-bottom: 10px;
+	}
+  
+	.instructors {
+	  background-color: black;
+	  color: white;
+	  padding: 20px;
+	  text-align: center;
+	}
+  
+	.instructors h1 {
+	  font-size: 30px;
+	  margin-top: 0;
+	  margin-bottom: 20px;
+	}
+  
+	.instructors h3 {
+	  font-size: 16px;
+	  margin-bottom: 10px;
+	}
+  
+	.memberships {
+	  background-color: black;
+	  color: white;
+	  padding: 20px;
+	  text-align: center;
+	}
+  
+	.memberships h1 {
+	  font-size: 30px;
+	  margin-top: 0;
+	  margin-bottom: 20px;
+	}
+  
+	.memberships h3 {
+	  font-size: 16px;
+	  margin-bottom: 10px;
+	}
+  
+	.schedule {
+	  background-color: black;
+	  color: white;
+	  padding: 20px;
+	  text-align: center;
+	}
+  
+	.schedule h1 {
+	  font-size: 30px;
+	  margin-top: 0;
+	  margin-bottom: 20px;
+	}
+  
+	.schedule h3 {
+	  font-size: 16px;
+	  margin-bottom: 10px;
+	}
+  
+	.footer {
+	  background-color: black;
+	  color: white;
+	  padding: 20px;
+	  text-align: center;
+	}
+  
+	.footer h3 {
+	  font-size: 20px;
+	  margin-top: 0;
+	  margin-bottom: 10px;
+	}
+  
+	.footer p {
+	  font-size: 14px;
+	  margin-bottom: 10px;
+	}
+  
+  
   /* Add more styles for other elements as needed */
 
 
-}
+
 .App {
   text-align: center;
 }

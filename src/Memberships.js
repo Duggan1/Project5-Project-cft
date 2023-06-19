@@ -171,7 +171,7 @@ function Memberships({user}) {
     
 
     const [formData, SetFormData] = useState({
-        plan:"1 Day Membership",
+        plan:"1 Month Membership",
         gym_id: "1",
   
       })
@@ -280,7 +280,7 @@ function Memberships({user}) {
        </div> 
        <div class="input">
            <select class="input-field" onChange={handlePlanChange}>
-           <option class="input-field" id="1day" value = '1 Day Membership' >1 Day Membership</option> 
+           {/* <option class="input-field" id="1day" value = '1 Day Membership' >1 Day Membership</option>  */}
              <option class="input-field" id="1month" value = '1 Month Membership'>1 Month Membership</option> 
              <option class="input-field" id="3month" value = '3 Month Membership' >3 Month Membership</option> 
              <option class="input-field" id="1year" value = '1 Year Membership'>1 Year Membership</option> {/* {formData.restaurant_id} */}
