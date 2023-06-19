@@ -57,14 +57,15 @@ function App() {
   return (
     
     
-    <div className = "navbar">
+    <div >
       
     <BrowserRouter>
     {user ? <Logout user={user} onLogout={handleLogout} />  :<Login onLogin={handleLogin} />}
     
     
-  
-      <NavBar user={user}/>
+      <div className="con8">
+      <NavBar style={{ maxWidth: '100%' }}user={user}/>
+      </div>
       
         <Routes>
           <Route path="/memberships" element={<Memberships user={user}/>}/>

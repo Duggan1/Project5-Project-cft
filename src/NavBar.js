@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import './App.css';
 
 const linkStyles = {
     display: "block",
     padding: "12px",
-    width: "100%",
-    margin: "0 6px ",
+    width: "100px",
+    // margin: "0 6px ",
     background: "rgb(9, 8, 8)",
     textDecoration: "none",
     color: "red",
