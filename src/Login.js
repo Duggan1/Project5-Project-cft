@@ -41,7 +41,7 @@ function Login({ onLogin }) {
     return (
         <div className="acct">
                     
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={username}
@@ -59,7 +59,7 @@ function Login({ onLogin }) {
         {isIncorrect ? <div>
             <h2>Username or Password Invalid, Please Try Again!</h2>
         </div>: null}
-      </form>
+      </form> */}
       <center>
             <div className="cftlogo" ></div>
             </center>

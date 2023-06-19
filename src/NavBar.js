@@ -73,7 +73,7 @@ function NavBar({user}) {
                         About CFT 
                     </NavLink>
                    
-                    
+{/*                     
                     {user ? null :
                     <NavLink
                         exact to="/signup"
@@ -84,7 +84,7 @@ function NavBar({user}) {
                         
                     >
                         Sign Up
-                    </NavLink>}
+                    </NavLink>} */}
 
                 </div>
                 </div>
