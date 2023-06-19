@@ -15,9 +15,12 @@ return (
 
 
     <div className="jiujitsu">
-        <h1>Jiu-Jitsu</h1>
+         
+        
     <center>
          < div className='nickB'></div>
+         <h1>Jiu-Jitsu</h1>
+        
 
         
         <h3>Welcome to Chicago Fight Team's</h3><h3> Jiu-Jitsu Program!</h3>
@@ -30,7 +33,7 @@ Our experienced instructors are passionate about sharing their knowledge and exp
 At Chicago Fight Team, we believe that Jiu-Jitsu is not only a great workout but also an excellent way to improve your overall health and wellbeing. Our program will help you develop strength, flexibility, endurance, and agility, while also boosting your confidence, reducing stress, and enhancing your mental focus.
 
 We invite you to come and experience the world-class Jiu-Jitsu program at Chicago Fight Team. Whether you are looking to compete at the highest level, or just want to learn a new skill and meet new people, we have something for everyone. Sign up for a free trial today and discover the benefits of Jiu-Jitsu for yourself.</p><br></br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NGYfM8yBRB0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe max-width="100%"width="560" height="315"  src="https://www.youtube.com/embed/NGYfM8yBRB0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br></br><p>The Chicago Fight Team's Jiu-Jitsu program has a rich history and a reputation for excellence. Founded by renowned Brazilian Jiu-Jitsu black belt and former fighter, our program has been a staple in the Chicago martial arts community for over two decades. Jeff's passion for the art and dedication to his students have earned him numerous accolades and a reputation as one of the best Jiu-Jitsu coaches in the world.
 
 At Chicago Fight Team, we believe that Jiu-Jitsu is not just a martial art but a way of life. Our program is rooted in the tradition and philosophy of Brazilian Jiu-Jitsu, which emphasizes respect, discipline, and perseverance. Our instructors are committed to helping students not only master the techniques of the art but also apply its principles to their daily lives.

@@ -8,6 +8,7 @@
 	.navbar {
 	  flex-direction: column;
 	  align-items: center;
+	  max-width: 100%;
 	}
   
 	.navLink {
@@ -23,8 +24,8 @@
   
 	.chiS,
 	.mexS {
-	  width: 100%;
-	  height: auto;
+		width: fit-content;
+		height: fit-content;
 	}
   
 	.about img,
@@ -59,6 +60,7 @@
   
 	.jiujitsu h1 {
 	  font-size: 60px;
+	  margin-top: -10%;
 	}
   
 	.jiujitsu h3,
@@ -93,15 +95,15 @@
   }
   
   .chiS {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 	background-image: url("./Images/CFTS.jpeg");
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size:contain;
   }
   
   .mexS {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 	background-image: url("./Images/mexS.jpeg");
 	background-repeat: no-repeat;
@@ -109,7 +111,7 @@
   }
   
   .about img {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 	z-index: 1;
   }
@@ -120,16 +122,24 @@
   }
   
   .nickB {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 	background-image: url("./Images/nickB.jpeg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	margin-top: -55px;
+	margin-top: 80px;
+  }
+  .jiujitsuT {
+	max-width: 100%;
+	height: auto;
+	background-image: url("./Images/jiujitsuT.jpeg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
   }
   
   .aril {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 	background-image: url("./Images/341260897_241927845028189_3175328261831266190_n.jpeg");
 	background-repeat: no-repeat;
@@ -137,7 +147,7 @@
   }
   
   .notAril {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 	background-image: url("./Images/172729431_143343254458624_1812354647126060410_n.jpeg");
 	background-repeat: no-repeat;
@@ -151,7 +161,8 @@
 	  align-items: center;
 	  text-align: center;
 	  justify-content: center;
-	  padding: 20px;
+	  /* padding: 20px; */
+	  max-width: 100%;
 	}
   
 	.about h1 {
@@ -166,13 +177,13 @@
 	.jiujitsu {
 	  background-color: black;
 	  color: white;
-	  padding: 20px;
+	  /* padding: 20px; */
 	  text-align: center;
 	}
   
 	.jiujitsu h1 {
 	  font-size: 40px;
-	  margin-top: 0;
+	  margin-top: -10%;
 	  margin-bottom: 20px;
 	}
   
@@ -295,7 +306,17 @@
 	background-image: url("./Images/nickB.jpeg");
   	background-repeat: no-repeat;
  	background-size: 100%;
-	 margin-top: -55px;
+	
+	
+}
+.jiujitsuT {
+	width: 860px;
+	max-width: 100%;
+  	height: 560px;
+	background-image: url("./Images/jiujitsuT.jpeg");
+  	background-repeat: no-repeat;
+ 	background-size: 100%;
+	
 }
 .aril {
 	width: 860px;
@@ -324,6 +345,7 @@
 }
 
 .blou {
+	max-width: 100%;
 	width: 860px;
   	height: 460px;
 	  background-image: url("./Images/aboutheader.jpeg");
@@ -332,7 +354,7 @@
 }
 .clou {
 	width: 240px;
-  	/* height: 360px; */
+  	height: 360px;
 	background-image: url("./Images/clou.jpeg");
 	background-repeat: no-repeat;
 	background-size:contain ;
@@ -431,18 +453,19 @@
 .foot {
 	background-color: black;
 	background-size: cover;
-	color:white;
+	color: white;
 	margin-bottom: -25px;
 	background-image: url(./Images/tester.jpeg);
-	background-size:contain;
-	border-top: 5px solid black ;
-	
-}
-.foot img {
+	background-size: contain;
+	border-top: 5px solid black;
+	padding: 20px; /* Add appropriate padding */
+  }
+  
+  .foot img {
 	width: 1px;
-	height: 260px;
-	
-}
+	height: 180px;
+  }
+  
 
 .jiujitsu {
 	margin-top: -25px;
@@ -463,15 +486,7 @@
 	font-size: 18px;
 	
 }
-.jiujitsuT {
-	width: 860px;
-  	height: 560px;
-	background-image: url("./Images/jiujitsuT.jpeg");
-  	background-repeat: no-repeat;
- 	background-size: 100%;
-	margin-bottom: -20px;
 
-}
 .about p {
 	line-height: 2.0; /* increase the line height for better readability */
 	margin-bottom: 1em; /* add some space between paragraphs */
