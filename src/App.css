@@ -13,6 +13,7 @@
   
 	.navLink {
 	  margin-top: 10px;
+	  max-width: 100%;
 	}
   
 	.navLink a {

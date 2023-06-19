@@ -9,6 +9,7 @@ const linkStyles = {
     background: "rgb(9, 8, 8)",
     textDecoration: "none",
     color: "red",
+    maxWidth: "100%"
   };
 function NavBar({user}) {
 
