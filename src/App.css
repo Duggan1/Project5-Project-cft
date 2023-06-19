@@ -20,6 +20,7 @@
   }
   .igh {
 	max-width: 80%;
+	max-height: 365px;
   }
  
   /* Styles for mobile devices */
@@ -43,6 +44,9 @@
 	  /* width: 100%; */
 	  text-align: center;
 	  font-size: small;
+	}
+	#shorty {
+		font-size: smaller;
 	}
   
 	.chiS,
@@ -596,9 +600,9 @@ ul {
   color: white;
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 .input {
 	display: flex;
 	flex-direction: column-reverse;
@@ -713,10 +717,11 @@ button {
   
 
 .input-field {
+	color: #000000;
 	border: 0;
 	z-index: 1;
 	background-color: transparent;
-	border-bottom: 2px solid #eee; 
+	border-bottom: 2px solid rgb(0, 0, 0); 
 	font: inherit;
 	font-size: 1.125rem;
 	padding: .25rem 0;

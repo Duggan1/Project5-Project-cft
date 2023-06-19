@@ -54,6 +54,7 @@ function NavBar({user}) {
                    
                     <NavLink
                         exact to="/memberships"
+                        id="shorty"
                         className="submit ui teal button"
                         style={linkStyles}
                         activeStyle={{
