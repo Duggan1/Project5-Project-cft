@@ -2,8 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const linkStyles = {
-    display: "block",
+    display: "inline-block",
     padding: "19px",
+    width: "100px",
     margin: "0 6px 5px",
     background: "rgb(9, 8, 8)",
     textDecoration: "none",
@@ -12,7 +13,7 @@ const linkStyles = {
 function NavBar({user}) {
 
     return (
-                <div>
+                <div className="navbar">
                 <div className="navLink" >
                     <NavLink
                         exact
