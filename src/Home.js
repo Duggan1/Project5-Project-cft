@@ -26,6 +26,7 @@ function Home() {
             <button onClick={toggleGym}>Take me to Guadalajara</button>
             <center>
                 <iframe
+                    class="igh"
                     src="https://www.instagram.com/chicagofightteam/embed"
                     width="440"
                     height="400"
@@ -46,6 +47,7 @@ function Home() {
             <button onClick={toggleGym}>Take me to Chicago</button>
             <center>
                 <iframe
+                    class="igh"
                     src="https://www.instagram.com/cft_guadalajara_official/embed"
                     width="440"
                     height="400"

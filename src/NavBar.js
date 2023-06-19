@@ -28,7 +28,7 @@ function NavBar({user}) {
                     >
                         Home
                     </NavLink>
-                    <br />
+                   
                     <NavLink
                         exact
                         to="/schedule"
@@ -39,7 +39,7 @@ function NavBar({user}) {
                     >
                         Schedule
                     </NavLink>
-                    <br />
+                    
                     <NavLink
                         exact to="/jiujitsu"
                         className="submit ui teal button"
@@ -50,7 +50,7 @@ function NavBar({user}) {
                     >
                         Jiu-Jitsu 
                     </NavLink>
-                    <br />
+                   
                     <NavLink
                         exact to="/memberships"
                         className="submit ui teal button"
@@ -61,7 +61,7 @@ function NavBar({user}) {
                         Memberships
                     </NavLink>
                    
-                    <br />
+                    
                     <NavLink
                         exact to="/aboutUs"
                         className="submit ui teal button"
@@ -72,7 +72,7 @@ function NavBar({user}) {
                     >
                         About CFT 
                     </NavLink>
-                    <br />
+                   
                     
                     {user ? null :
                     <NavLink
