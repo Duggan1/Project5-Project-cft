@@ -20,10 +20,8 @@ return (
     <center>
          < div className='nickB'></div>
          <h1>Jiu-Jitsu</h1>
-        
-
-        
-        <h3>Welcome to Chicago Fight Team's</h3><h3> Jiu-Jitsu Program!</h3>
+    
+        {/* <h3>Welcome to Chicago Fight Team's</h3><h3> Jiu-Jitsu Program!</h3> */}
         <p>Our program is designed for individuals of all levels who are passionate about learning and practicing Brazilian Jiu-Jitsu. Whether you are a beginner or an advanced practitioner, our world-class instructors are dedicated to helping you achieve your goals and become the best version of yourself.
 
 At Chicago Fight Team, we believe that Jiu-Jitsu is not just a sport but a way of life. Our program is based on the principles of respect, discipline, and perseverance, which we believe are essential for achieving success on and off the mat. We take pride in creating a positive and inclusive training environment where everyone is welcome, and our members are more than just training partners, but also part of our extended family.
@@ -56,7 +54,7 @@ In conclusion, Chicago Fight Team's Jiu-Jitsu program offers an excellent opport
 
  <br></br> < div className='jiujitsuT'></div>
     </center>
-    <p>   </p>
+    
     </div>
     
     

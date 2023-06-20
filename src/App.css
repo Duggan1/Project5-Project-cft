@@ -58,7 +58,7 @@
 	.about img,
 	.jiujitsu img {
 	  width: 100%;
-	  height: auto;
+	  min-height: 360px;
 	}
   
 	.nickB,
@@ -73,6 +73,14 @@
 	  width: 100%;
 	  height: auto;
 	  background-size: cover;
+	}
+	.clou {
+
+		width: 100%;
+		min-height: 360px;
+	  	height: auto;
+	  	background-size: cover;
+
 	}
   
 	.foot img {
@@ -258,19 +266,19 @@
 	.schedule {
 	  background-color: black;
 	  color: white;
-	  padding: 20px;
+	  /* padding: 20px; */
 	  text-align: center;
 	}
   
 	.schedule h1 {
 	  font-size: 30px;
 	  margin-top: 0;
-	  margin-bottom: 20px;
+	  /* margin-bottom: 20px; */
 	}
   
 	.schedule h3 {
 	  font-size: 16px;
-	  margin-bottom: 10px;
+	  /* margin-bottom: 10px; */
 	}
   
 	.footer {
@@ -485,7 +493,7 @@
 	background-image: url(./Images/tester.jpeg);
 	background-size: contain;
 	border-top: 5px solid black;
-	padding: 20px; /* Add appropriate padding */
+	/* padding: 20px;  */
   }
   
   .foot img {
@@ -530,6 +538,7 @@
 	font-weight: 900;
 	text-shadow: 4px 4px 7px rgb(218, 0, 0);
 	color: #FFFFFF;
+	margin-bottom: -10px;
 }
 .home h1 {
 	font-size: 80px;
