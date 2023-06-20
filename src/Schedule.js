@@ -19,8 +19,9 @@ function Schedule() {
               Show me CFT Guadalajara's Schedule
             </button>
           </center>
-          <center>
+          <center><div className="hajd">
             <div className="chiS"></div>
+            </div>
           </center>
         </div>
       ) : (
