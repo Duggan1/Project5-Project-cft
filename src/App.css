@@ -46,7 +46,7 @@
 	  font-size: small;
 	}
 	#shorty {
-		font-size: smaller;
+		font-size: x-small;
 	}
   
 	.chiS,
@@ -639,7 +639,7 @@ ul {
 .input-label {
 	color: #000000;
 	position: absolute;
-	top: 1.5rem;
+	top: 1rem;
 	/* transition: .25s ease; */
 }
 .home {

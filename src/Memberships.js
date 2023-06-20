@@ -266,6 +266,7 @@ function Memberships({user}) {
             <center><div className='aril'></div></center>
             <div className="description">
             <h1>Chicago Fight Team </h1>
+            <h4>Chose your membership !</h4>
             {/* <h5>{pprice}</h5> */}
             </div></div>
     <form class="card-form" onSubmit={ handleSubmit }>
@@ -276,7 +277,7 @@ function Memberships({user}) {
              <option class="input-field" id="chicago" value = '1' >Chicago IL, USA</option> 
              <option class="input-field" id="mexico" value ='2'>Guadalajara Jalisco, Mexico</option> 
            </select>
-         <label class="input-label">Chicago Fight Team Locations</label>          
+         {/* <label class="input-label">Chicago Fight Team Locations</label>           */}
        </div> 
        <div class="input">
            <select class="input-field" onChange={handlePlanChange}>
@@ -285,7 +286,7 @@ function Memberships({user}) {
              <option class="input-field" id="3month" value = '3 Month Membership' >3 Month Membership</option> 
              <option class="input-field" id="1year" value = '1 Year Membership'>1 Year Membership</option> {/* {formData.restaurant_id} */}
            </select>
-         <label class="input-label">Membership Options</label>          
+         {/* <label class="input-label">Membership Options</label>           */}
        </div>
        <div class="action">
         <button class="action-button" type='submit'>Purchase Membership</button>
@@ -327,6 +328,7 @@ function Memberships({user}) {
         <center><div className='notAril'></div></center>
             <div className="description">
             <h1>Chicago Fight Team Guadalajara</h1>
+            <h3>Chose your membership !</h3>
             {/* <h5>{pprice}</h5> */}
             </div></div>
     <form class="card-form" onSubmit={ handleSubmit }>
@@ -337,16 +339,16 @@ function Memberships({user}) {
              <option class="input-field" id="chicago" value = '1' >Chicago IL, USA</option> 
              <option class="input-field" id="mexico" value ='2'>Guadalajara Jalisco, Mexico</option> 
            </select>
-         <label class="input-label">Chicago Fight Team Locations</label>          
+         {/* <label class="input-label">Chicago Fight Team Locations</label>           */}
        </div> 
        <div class="input">
            <select class="input-field" onChange={handlePlanChange}>
-           <option class="input-field" id="1day" value = '1 Day Membership' >1 Day Membership</option> 
+           {/* <option class="input-field" id="1day" value = '1 Day Membership' >1 Day Membership</option>  */}
              <option class="input-field" id="1month" value = '1 Month Membership'>1 Month Membership</option> 
              <option class="input-field" id="3month" value = '3 Month Membership' >3 Month Membership</option> 
              <option class="input-field" id="1year" value = '1 Year Membership'>1 Year Membership</option> {/* {formData.restaurant_id} */}
            </select>
-         <label class="input-label">Membership Options</label>          
+         {/* <label class="input-label">Membership Options</label>           */}
        </div>
        <div class="action">
         <button class="action-button" type='submit'>Purchase Membership</button>
