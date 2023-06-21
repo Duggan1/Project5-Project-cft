@@ -195,14 +195,12 @@ function Memberships({user}) {
 
       function handleSubmit(e){
         e.preventDefault()
-        if (user === null){
-        toggleIncorrect()
-        } else {
+        
 
         const newMembership = {
           plan : formData.plan,
           gym_id: formData.gym_id,
-          user_id: user.id,
+          user_id: 1,
 
         }
         fetch('/memberships', { // our specific link needs to be added
@@ -233,7 +231,7 @@ function Memberships({user}) {
             navigate('/')
         }
         // .then(onAddReview)
-      }}
+      }
     //   function StripeCheckout() {
     //     return (
     //       <Elements stripe={stripePromise}>
