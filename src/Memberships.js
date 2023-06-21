@@ -262,7 +262,7 @@ function Memberships({user}) {
 
   return (
     < >
-    {mex ? <div className='memberships1' ><div className="product">
+    {mex ? <div className='memberships1' ><div >
             <center><div className='aril'></div></center>
             <div className="description">
             <h1>Chicago Fight Team </h1>

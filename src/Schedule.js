@@ -13,27 +13,29 @@ function Schedule() {
   return (
     <div>
       {chiTown ? (
-        <div className="sjs">
+        <div className="sche" >
+          
+          <center><div className="hajd">
+            <div className="chiS"></div>
+            </div>
+          </center>
           <center>
             <button onClick={toggleGym}>
               Show me CFT Guadalajara's Schedule
             </button>
           </center>
-          <center><div className="hajd">
-            <div className="chiS"></div>
-            </div>
-          </center>
         </div>
       ) : (
-        <div className="sjs">
-          <center>
-            <button onClick={toggleGym}>
-              Show me CFT Chicago's Schedule
-            </button>
-          </center>
+        <div className="sche" >
+          
+            
+          
           <center>
             <div className="mexS"></div>
-          </center>
+          </center><center>
+          <button onClick={toggleGym}>
+              Show me CFT Chicago's Schedule
+            </button></center>
         </div>
       )}
     </div>
