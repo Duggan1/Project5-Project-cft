@@ -101,22 +101,7 @@ function Memberships({user}) {
             </div>
           </div>
           <form action="/create-checkout-session" method="POST">
-          {/* <div class="input">
-               <select class="input-field" onChange={handleGymChange}>
-                 <option class="input-field" id="chicago" value = '1' >Chicago IL, USA</option> 
-                 <option class="input-field" id="mexico" value ='2'>Guadalajara Jalisco, Mexico</option> 
-               </select>
-             <label class="input-label">Chicago Fight Team Locations</label>          
-           </div> 
-           <div class="input">
-               <select class="input-field" onChange={handlePlanChange}>
-               <option class="input-field" id="1day" value = '1 Day Membership' >1 Day Membership</option> 
-                 <option class="input-field" id="1month" value = '1 Month Membership'>1 Month Membership</option> 
-                 <option class="input-field" id="3month" value = '3 Month Membership' >3 Month Membership</option> 
-                 <option class="input-field" id="1year" value = '1 Year Membership'>1 Year Membership</option> {/* {formData.restaurant_id} */}
-               {/* </select>
-             <label class="input-label">Membership Options</label>          
-           </div> */} 
+      
             <button type="submit">
               Checkout
             </button>
@@ -232,13 +217,7 @@ function Memberships({user}) {
         }
         // .then(onAddReview)
       }
-    //   function StripeCheckout() {
-    //     return (
-    //       <Elements stripe={stripePromise}>
-    //         <CheckoutForm />
-    //       </Elements>
-    //     );
-    //   }
+  
 
         let mex = true
         if (formData.gym_id === "1"){
@@ -255,9 +234,10 @@ function Memberships({user}) {
         if (formData.gym_id === "2"){
             pic2 = "https://scontent-ord5-2.xx.fbcdn.net/v/t1.6435-9/172729431_143343254458624_1812354647126060410_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=9YlZuf9VTy4AX-WVdJi&_nc_ht=scontent-ord5-2.xx&oh=00_AfC1-X05BhccsRWoKHlDXRKtC5-hXGr9LxJdqFO-c0aYZQ&oe=647CB888"
         }
+        const [ firstCftMonth, setFirstCftMonth] = useState(true)
 
 
-
+        
   return (
     < >
     {mex ? <div className='memberships1' ><div >
@@ -267,57 +247,70 @@ function Memberships({user}) {
             <h4>Chose your membership !</h4>
             {/* <h5>{pprice}</h5> */}
             </div></div>
+            
+
+            
+
+
     <form class="card-form" onSubmit={ handleSubmit }>
         
       
-        <div class="input">
-           <select class="input-field" onChange={handleGymChange}>
-             <option class="input-field" id="chicago" value = '1' >Chicago IL, USA</option> 
-             <option class="input-field" id="mexico" value ='2'>Guadalajara Jalisco, Mexico</option> 
-           </select>
-         {/* <label class="input-label">Chicago Fight Team Locations</label>           */}
-       </div> 
-       <div class="input">
-           <select class="input-field" onChange={handlePlanChange}>
-           {/* <option class="input-field" id="1day" value = '1 Day Membership' >1 Day Membership</option>  */}
-             <option class="input-field" id="1month" value = '1 Month Membership'>1 Month Membership</option> 
-             <option class="input-field" id="3month" value = '3 Month Membership' >3 Month Membership</option> 
-             <option class="input-field" id="1year" value = '1 Year Membership'>1 Year Membership</option> {/* {formData.restaurant_id} */}
-           </select>
-         {/* <label class="input-label">Membership Options</label>           */}
-       </div>
-       <div class="action">
-        <button class="action-button" type='submit'>Purchase Membership</button>
-        {isIncorrect ? <div>
-            <h2>You need to LOG-IN or SIGN-UP before you get a Membership, Please Try Again!</h2>
-        </div>: null}
-      </div>
+    <div className="input">
+  <select className="input-field" onChange={handleGymChange}>
+    <option className="input-field" id="chicago" value="1">
+      Chicago IL, USA
+    </option>
+    <option className="input-field" id="mexico" value="2">
+      Guadalajara Jalisco, Mexico
+    </option>
+  </select>
+</div>
+<div style={{backgroundColor:'#000000a4'}} className=" inline-input">
+            <label htmlFor="firstTimeMember">First Month at Chicago Fight Team?</label>
+            <input
+              type="checkbox"
+              id="firstTimeMember"
+              name="firstTimeMember"
+              checked={firstCftMonth}
+              onChange={(e) => setFirstCftMonth(e.target.checked)}
+            />
+          </div>
+
+<div className="input">
+  <select className="input-field" onChange={handlePlanChange}>
+    {/* <option className="input-field" id="1day" value="1 Day Membership">1 Day Membership</option> */}
+    <option className="input-field" id="1month" value="1 Month Membership">
+      1 Month Membership
+    </option>
+    <option className="input-field" id="3month" value="3 Month Membership">
+      3 Month Membership
+    </option>
+    <option className="input-field" id="1year" value="1 Year Membership">
+      1 Year Membership
+    </option>
+    {/* {formData.restaurant_id} */}
+  </select>
+  {/* <label className="input-label">Membership Options</label> */}
+</div>
+
+<div className="action">
+  <button className="action-button" type="submit">
+    Purchase Membership
+  </button>
+  {isIncorrect ? (
+    <div>
+      <h2>
+        You need to LOG-IN or SIGN-UP before you get a Membership, Please Try Again!
+      </h2>
+    </div>
+  ) : null}
+</div>
+
       </form>  
       {/* <h5>{pprice}</h5> */}
       <h2>{showp}</h2>
 
-      {/* <button onClick={handleClick}>Go to Stripe</button> */}
-
-      {/* {message ? <Message message={message} /> : <ProductDisplay />} */}
-      {/* <form onSubmit={handleSubmitS}>
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <CardElement />
-      <button type="submit" disabled={!stripe}>
-        Pay
-      </button>
-    </form>
- */}
-   {/* <NavLink
-                        exact to="/mbg"
-                        className="submit ui teal button"
-                        style={linkStyles}
-                        activeStyle={{
-                            background: "white",}}
-                        
-                    >
-                        Who Belongs to which Gym Location & their Membership package 
-                    </NavLink> */}
+      
 
 
    
@@ -339,6 +332,7 @@ function Memberships({user}) {
            </select>
          {/* <label class="input-label">Chicago Fight Team Locations</label>           */}
        </div> 
+
        <div class="input">
            <select class="input-field" onChange={handlePlanChange}>
            {/* <option class="input-field" id="1day" value = '1 Day Membership' >1 Day Membership</option>  */}
@@ -358,19 +352,7 @@ function Memberships({user}) {
       {/* <h5>{pprice}</h5> */}
       <h2>{showp}</h2>
 
-      {/* <button onClick={handleClick}>Go to Stripe</button> */}
-
-      {/* {message ? <Message message={message} /> : <ProductDisplay />} */}
-      {/* <form onSubmit={handleSubmitS}>
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <CardElement />
-      <button type="submit" disabled={!stripe}>
-        Pay
-      </button>
-    </form>
- */}
-   
+     
 
    
 

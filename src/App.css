@@ -548,6 +548,7 @@
 	background-size: contain;
 	border-top: 5px solid black;
 	/* padding: 20px;  */
+	min-width: 100%;
   }
   
   .foot img {
@@ -670,6 +671,7 @@ ul {
 }
 .acct {
 	background-color: rgb(9, 8, 8);
+	/* background-color: ; */
 	
 	color:white;
 	text-align: right;
