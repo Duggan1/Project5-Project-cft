@@ -249,7 +249,16 @@ function Memberships({user}) {
             </div></div>
             
 
-            
+            <div style={{backgroundColor:'#000000a4'}} className=" inline-input">
+            <label htmlFor="firstTimeMember">First Month at Chicago Fight Team?</label>
+            <input
+              type="checkbox"
+              id="firstTimeMember"
+              name="firstTimeMember"
+              checked={firstCftMonth}
+              onChange={(e) => setFirstCftMonth(e.target.checked)}
+            />
+          </div>  
 
 
     <form class="card-form" onSubmit={ handleSubmit }>
@@ -265,16 +274,7 @@ function Memberships({user}) {
     </option>
   </select>
 </div>
-<div style={{backgroundColor:'#000000a4'}} className=" inline-input">
-            <label htmlFor="firstTimeMember">First Month at Chicago Fight Team?</label>
-            <input
-              type="checkbox"
-              id="firstTimeMember"
-              name="firstTimeMember"
-              checked={firstCftMonth}
-              onChange={(e) => setFirstCftMonth(e.target.checked)}
-            />
-          </div>
+
 
 <div className="input">
   <select className="input-field" onChange={handlePlanChange}>
