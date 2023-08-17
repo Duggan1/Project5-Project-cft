@@ -442,9 +442,11 @@
 .clou {
 	width: 240px;
   	height: 360px;
+	min-width: 200px;
+	min-height: 360px;
 	background-image: url("./Images/clou.jpeg");
 	background-repeat: no-repeat;
-	background-size:contain ;
+	background-size:cover ;
 }
 .cbelal {
 	width: 550px;
@@ -457,16 +459,17 @@
 	width: 460px;
   	height: 355px;
 	background-image: url("./Images/jd.jpeg");
+	
 	background-repeat: no-repeat;
 	background-size: 100%;
 
 }
 .horacio {
 	width: 460px;
-  	height: 360px;
+  	min-height: 360px;
 	background-image: url("./Images/horacio.jpeg");
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size:100%;
 }
 .hajd {
 	display: flex;
