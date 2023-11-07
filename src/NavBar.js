@@ -52,7 +52,7 @@ function NavBar({user}) {
                         Jiu-Jitsu 
                     </NavLink>
                    
-                    <NavLink
+                    {/* <NavLink
                         exact to="/memberships"
                         id="shorty"
                         className="submit ui teal button"
@@ -61,7 +61,7 @@ function NavBar({user}) {
                             background: "white",textOverflow: "clip"}}
                     >
                         Memberships
-                    </NavLink>
+                    </NavLink> */}
                    
                     
                     <NavLink
