@@ -43,10 +43,10 @@
 	  min-width: 100%;
 	}
   
-	.navLink {
+	/* .navLink {
 	  margin: 6px;
 	  
-	}
+	} */
   
 	.navLink a {
 	  margin: 6px 0;
@@ -505,12 +505,12 @@
 
 .cftlogo {
   width: 360px;
-  height: 360px;
+  height: 260px;
   background-image: url("./Images/oldCft.jpeg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   align-items: center;
-  margin-bottom: -65px;
+  margin-bottom: 0px;
 }
 
 .memberships2 form {
@@ -680,7 +680,8 @@ ul {
 .acct {
 	background-color: rgb(9, 8, 8);
 	/* background-color: ; */
-	
+	/* margin-left: -10%;
+	margin-right: -10%; */
 	color:white;
 	text-align: right;
 	
@@ -691,6 +692,7 @@ ul {
 }
 .navbar {
 	max-width: 100%;
+	margin-top:0%;
 }
 .navLink {
 	background-color: rgb(9, 8, 8);

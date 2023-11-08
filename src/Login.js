@@ -63,6 +63,8 @@ function Login({ onLogin }) {
       <center>
             <div className="cftlogo" ></div>
             </center>
+            <p style={{margin :'0',fontSize:'smaller'}}>6528 S Lavernge Ave Chicago, Illinois</p>
+            <p style={{margin :'0',fontSize:'smaller'}} > 1(773) 885-5700</p>
       </div>
     );
   }

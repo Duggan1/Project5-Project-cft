@@ -21,8 +21,23 @@ function Home() {
         <h2>Welcome Home</h2>
         
             <h1>Chicago Fight Team</h1>
-            <p>6528 S Lavernge Ave Chicago, Illinois</p>
-            <p>1(773) 885-5700</p>
+
+            <p style={{ textAlign:'center' }}>
+                <span style={{ background: 'rgba(0, 0, 0, 0.5)', color: 'white', padding: '5px', fontWeight: 'bold', textShadow: '0 0 15px black', }}>
+                6528 S Lavernge Ave Chicago, Illinois
+                </span>
+            </p>
+            <p style={{ textAlign:'center' }}>
+                <span style={{background: 'rgba(0, 0, 0, 0.5)', color: 'white', padding: '5px', fontWeight: 'bold', textShadow: '0 0 15px black' }}>
+                1(773) 885-5700
+                </span>
+            </p>
+
+            {/* <p>6528 S Lavernge Ave Chicago, Illinois</p>
+            <p></p> */}
+
+
+            
             <button onClick={toggleGym}>Take me to Guadalajara</button>
             <center>
                 <iframe

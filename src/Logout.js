@@ -129,6 +129,7 @@ function Logout({ onLogout, user }) {
       <center>
             <div className="cftlogo" ></div>
             </center>
+            <p>6528 S Lavernge Ave Chicago, Illinois. 1(773) 885-5700</p>
       </div>
       
     </>
