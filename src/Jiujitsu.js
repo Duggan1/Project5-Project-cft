@@ -19,7 +19,7 @@ return (
         
     <center>
          < div className='nickB'></div>
-         <h1>Jiu-Jitsu</h1>
+         {/* <h1>Jiu-Jitsu</h1> */}
     
         {/* <h3>Welcome to Chicago Fight Team's</h3><h3> Jiu-Jitsu Program!</h3> */}
         <p>Our program is designed for individuals of all levels who are passionate about learning and practicing Brazilian Jiu-Jitsu. Whether you are a beginner or an advanced practitioner, our world-class instructors are dedicated to helping you achieve your goals and become the best version of yourself.
@@ -42,7 +42,7 @@ We invite you to come and experience the world-class Jiu-Jitsu program at Chicag
   ></iframe>
 </div>
 
-<br></br><p>The Chicago Fight Team's Jiu-Jitsu program has a rich history and a reputation for excellence. Founded by renowned Brazilian Jiu-Jitsu black belt and former fighter, our program has been a staple in the Chicago martial arts community for over two decades. Jeff's passion for the art and dedication to his students have earned him numerous accolades and a reputation as one of the best Jiu-Jitsu coaches in the world.
+<br></br><p>The Chicago Fight Team's Jiu-Jitsu program has a rich history and a reputation for excellence. Founded by renowned Brazilian Jiu-Jitsu black belt and former fighter, our program has been a staple in the Chicago martial arts community for over two decades. Nicasio's passion for the art and dedication to his students have earned him numerous accolades and a reputation as one of the best Jiu-Jitsu coaches in the world.
 
 At Chicago Fight Team, we believe that Jiu-Jitsu is not just a martial art but a way of life. Our program is rooted in the tradition and philosophy of Brazilian Jiu-Jitsu, which emphasizes respect, discipline, and perseverance. Our instructors are committed to helping students not only master the techniques of the art but also apply its principles to their daily lives.
 
