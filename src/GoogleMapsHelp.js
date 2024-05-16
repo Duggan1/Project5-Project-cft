@@ -7,6 +7,7 @@ import OGs from './Images/aboutheader.jpeg'
 import cBelal from './Images/cBelal.jpeg'
 // import jd2 from'./Images/jd2.jpeg'
 import bjj from './Images/jiujitsuT.jpeg'
+import oldHead from './Images/oldCft.jpeg'
 
 
 export default function CFTImageReel() {
@@ -37,7 +38,7 @@ function classNames(...classes) {
 
       return (
         <div style={{borderRadius:'50%', marginLeft: '10px', marginRight: '5%'}}>
-        <center>
+        <center style={{borderRadius:'50%',width:'200px',height:'200px',backgroundImage: `url(${oldHead})`,backgroundSize:'100% 100%'}} >
                 <div style={{borderRadius:'50%',width:'200px',height:'200px',backgroundImage: `url(${CFTImages})`,backgroundSize:'100% 100%'}} >
                 
                  {/* <GoogleMapsHelp/> */}

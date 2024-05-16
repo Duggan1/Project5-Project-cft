@@ -20,9 +20,9 @@ function Schedule() {
             </div>
           </center>
           <center>
-            <button onClick={toggleGym}>
+            {/* <button onClick={toggleGym}>
               Show me CFT Guadalajara's Schedule
-            </button>
+            </button> */}
           </center>
         </div>
       ) : (
