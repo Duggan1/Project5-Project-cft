@@ -16,7 +16,7 @@ function AboutUs() {
         Roberto's experience and knowledge of martial arts are unparalleled. He has also trained with Brazilian and Holland Muay Thai Champion Artur Mariano, which has helped him develop a well-rounded skill set that he now imparts to his students. Roberto is passionate about teaching and has a deep commitment to his students' success. Whether you want to become a fighter or just get in shape, Roberto Ramirez and the Chicago Fight Team can help you achieve your goals.
 
         In addition to Roberto, Chicago Fight Team has a team of experienced trainers and fighters.</p><br></br><div className="hajd"> <div className="clou"></div><div className="cbelal"></div></div>
-        <p> PFL world champion Louis Taylor, top 5 UFC contender Belal Muhammad, and UFC veteran Horacio Gutierrez are all part of the team. These fighters bring a wealth of experience and knowledge to the gym, providing valuable guidance and training to the next generation of fighters.
+        <p> current UFC Champion Belal Muhammad, former PFL world champion Louis Taylor, and UFC veteran Horacio Gutierrez are all part of the team. These fighters bring a wealth of experience and knowledge to the gym, providing valuable guidance and training to the next generation of fighters.
 
         Chicago Fight Team also boasts a talented jiu-jitsu coach in Nicasio Sanchez, who is a Black belt and an expert in the art of Brazilian jiu-jitsu. Nicasio has trained extensively in Brazil and has competed at the highest level of competition. His expertise and knowledge of jiu-jitsu are invaluable to the team and its members.
 
