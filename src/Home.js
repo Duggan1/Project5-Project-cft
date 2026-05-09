@@ -61,14 +61,7 @@ function Home() {
             {/* <p>6528 S Lavernge Ave Chicago, Illinois</p>
             <p></p> */}
 
-<center>
-                <div style={{border:'black solid 3px',borderRadius:'10%',width:'55%',height:'300px',backgroundImage: `url(${gooogleMapsI})`,backgroundSize:'100% 100%'}} >
-                
-                 {/* <GoogleMapsHelp/> */}
-                </div>
-                </center>
-
-                <a
+                {/* <a
           href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10898.71228899701!2d-87.8481573845455!3d41.75062915059737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e376fbe888c2b%3A0x5798ef4e6ee9bff0!2sChicago%20Fight%20Team!5e1!3m2!1sen!2sus!4v1778344651037!5m2!1sen!2sus"
           
           target="_blank"
@@ -87,7 +80,7 @@ function Home() {
           >
             Get Directions
           </button>
-        </a>
+        </a> */}
             
 
 

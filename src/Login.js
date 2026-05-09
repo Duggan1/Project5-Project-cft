@@ -63,10 +63,11 @@ function Login({ onLogin }) {
       <center>
             <div className="cftlogo" ></div>
             </center>
-            <a style={{margin :'0',fontSize:'smaller', color:'white'}} href="https://www.google.com/maps/place/8696+47th+St,+Lyons,+IL+60534/@41.8060748,-87.8398832,17z/data=!4m10!1m2!2m1!1schicago+fight+team++8696+w+47th+st+lyons+illinois+!3m6!1s0x880e361341753f5b:0x777f5a692510f0a6!8m2!3d41.8059629!4d-87.8363641!15sCjFjaGljYWdvIGZpZ2h0IHRlYW0gIDg2OTYgdyA0N3RoIHN0IGx5b25zIGlsbGlub2lzkgEQY29tcG91bmRfc2VjdGlvbuABAA!16s%2Fg%2F11bw4nfy1c?entry=ttu"
-     target="_blank">8696 W 47th St Lyons, Illinois</a><br></br>
+            <a style={{margin :'0',fontSize:'smaller', color:'white'}} href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10898.71228899701!2d-87.8481573845455!3d41.75062915059737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e376fbe888c2b%3A0x5798ef4e6ee9bff0!2sChicago%20Fight%20Team!5e1!3m2!1sen!2sus!4v1778345867399!5m2!1sen!2sus"
+     target="_blank">7750 Archer Rd, Justice, IL 60458</a><br></br>
             <a href="tel:+17082794734"style={{margin :'0',fontSize:'smaller', color:'white'}} > 1(773) 885-5700</a>
       </div>
     );
   }
   export default Login;
+
