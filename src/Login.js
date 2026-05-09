@@ -63,7 +63,7 @@ function Login({ onLogin }) {
       <center>
             <div className="cftlogo" ></div>
             </center>
-            <a style={{margin :'0',fontSize:'smaller', color:'white'}} href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10898.71228899701!2d-87.8481573845455!3d41.75062915059737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e376fbe888c2b%3A0x5798ef4e6ee9bff0!2sChicago%20Fight%20Team!5e1!3m2!1sen!2sus!4v1778345867399!5m2!1sen!2sus"
+            <a style={{margin :'0',fontSize:'smaller', color:'white'}} href="https://www.google.com/maps/place/Chicago+Fight+Team/@41.7506136,-87.8378791,626m/data=!3m2!1e3!4b1!4m6!3m5!1s0x880e376fbe888c2b:0x5798ef4e6ee9bff0!8m2!3d41.7506136!4d-87.8378791!16s%2Fg%2F11y51wy25m?hl=en&entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
      target="_blank">7750 Archer Rd, Justice, IL 60458</a><br></br>
             <a href="tel:+17082794734"style={{margin :'0',fontSize:'smaller', color:'white'}} > 1(773) 885-5700</a>
       </div>
